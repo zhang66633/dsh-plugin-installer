@@ -16,6 +16,7 @@
 - **修复**：
   - 需要 hoisted 时：`pnpm install --config.nodeLinker=hoisted`（会重建布局）。
   - 通常更稳：**保持 isolated，把子插件加为 profile 直接依赖**（`pnpm add -w @scope/subpkg`），顶层就有 symlink。
+- **真实案例（2026-08，cc-tui）**：`dsh plugin --profile cc-tui add dsh-cc-tui` 装的 profile，workspace 写 `nodeLinker: hoisted` 但被 pnpm 9.15 吞掉 → `.modules.yaml` 仍是 `isolated` → cc-tui 的 bundle patch 插的 loader 行（`dsh-session-persistence-sqlite`/`dsh-agent-presets`/`dsh-cordis-host-runner`/`dsh-working-activity`）从 profile 根 import 全 404 → boot 报 `plugin tree failed: Cannot find package '@deepseek-ai/...'`。**修复**：`cd ~/.dsh/profiles/cc-tui && pnpm install --config.nodeLinker=hoisted`（2s 重建），`.modules.yaml` 变 hoisted，5 包回根，dump-config 通过。验证：boot 只剩该插件的 TTY 检查（预期）。
 
 ## 3. cordis.patch.yml 是 patch 层，不是 root 配置
 
