@@ -33,6 +33,7 @@ const S = {
   cardDesc: { fontSize: '12px', color: 'var(--dsw-fg-muted, #8b95a5)', margin: '2px 0 0', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' },
   stars: { fontSize: '12px', color: 'var(--dsw-fg-muted, #8b95a5)', whiteSpace: 'nowrap' },
   chip: { fontSize: '11px', padding: '2px 8px', borderRadius: '999px', border: '1px solid var(--dsw-border, #2e3440)', color: 'var(--dsw-fg-muted, #8b95a5)', whiteSpace: 'nowrap' },
+  chipAuto: { fontSize: '11px', padding: '2px 8px', borderRadius: '999px', border: '1px solid var(--dsw-warning, #e0a43a)', color: 'var(--dsw-warning, #e0a43a)', whiteSpace: 'nowrap' },
   btn: { fontSize: '12px', padding: '6px 14px', borderRadius: '8px', border: '1px solid var(--dsw-accent, #4d9fff)', background: 'transparent', color: 'var(--dsw-accent, #4d9fff)', cursor: 'pointer', whiteSpace: 'nowrap' },
   btnDone: { borderColor: 'var(--dsw-fg-muted, #8b95a5)', color: 'var(--dsw-fg-muted, #8b95a5)', cursor: 'default' },
   confirmWrap: { display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: '6px', maxWidth: '260px' },
@@ -96,6 +97,7 @@ function StoreView({ requestInstall }) {
               descOf(p) ? h('p', { style: S.cardDesc, title: descOf(p) }, descOf(p)) : null,
             ),
             p.category ? h('span', { style: S.chip }, p.category) : null,
+            p.source === 'discovered' ? h('span', { style: S.chipAuto, title: '自动发现：仅通过清单检查（package.json/入口），未经运行验证' }, '自动发现') : null,
             p.stars > 0 ? h('span', { style: S.stars }, `★ ${p.stars}`) : null,
             p.installed
               ? h('span', { style: { ...S.btn, ...S.btnDone }, title: '已安装，重启 dsh web 后生效' }, '已安装')
