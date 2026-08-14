@@ -188,7 +188,7 @@ Patch management is **version-conditional**: each patch carries a marker in the 
 
 ## Compatibility
 
-- **dsh ecosystem**: `0.1.0-rc.6` (the npm `latest` tag is stale — always pin exact versions)
+- **dsh ecosystem**: `0.1.0-rc.6` — **last verified 2026-08-14** (skill body + plugin load + `dsh --dump-config`). The npm `latest` tag is stale — always pin exact versions.
 - **OS**: Windows (Git Bash), macOS, Linux — scripts are POSIX `bash`
 - **pnpm**: 9.15 `nodeLinker` quirk handled (use `pnpm install --config.nodeLinker=hoisted` when you need hoisting)
 
@@ -217,6 +217,17 @@ dsh-plugin-installer/
     └── _plugins.package.json   # verified dependency template
 ```
 
+## Permissions & data
+
+This skill installs and manages dsh plugins on your machine. What it touches:
+
+- **Files read/written**: your dsh profile (`~/.dsh/profiles/<profile>/package.json`), patch layers (`~/.dsh/cordis.patch.yml`), and plugin directories under `<plugins_dir>`. It edits profile manifests to register plugins.
+- **Network**: npm registry (install/update plugins) and GitHub (git clone for source plugins). No analytics, no telemetry.
+- **Credentials**: none stored — it never reads `.credentials.yaml` or any API keys.
+- **Execution**: the bundled scripts (`bootstrap.sh`, `patch-skins.sh`, `diagnose.sh`) run shell commands (`npm`, `pnpm`, `git`, `node`) on your machine.
+
+It is a local, user-controlled tool: nothing runs without your go-ahead at a 🔴 decision point.
+
 ## Troubleshooting
 
 - Run `bash <skill-dir>/scripts/diagnose.sh <plugin>` for a structured health check.
@@ -227,6 +238,8 @@ dsh-plugin-installer/
 
 Found a new trap or a better fix? PRs welcome. Keep the three-part format (symptom → root cause → fix) in `references/edge-cases.md`, and update the version table in the skin section when upstream moves.
 
-## License
+## License & security
 
 [MIT](./LICENSE) © 2026 zhang66633
+
+To report a security issue privately, open a GitHub security advisory on this repo rather than a public issue.

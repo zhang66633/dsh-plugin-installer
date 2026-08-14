@@ -188,7 +188,7 @@ bash <技能目录>/scripts/patch-skins.sh --check  # 只报告，不打
 
 ## 兼容性
 
-- **dsh 生态**：`0.1.0-rc.6`（npm `latest` tag 是旧的——永远钉精确版本）
+- **dsh 生态**：`0.1.0-rc.6`——**最后验证 2026-08-14**（技能本体 + 插件加载 + `dsh --dump-config`）。npm `latest` tag 是旧的——永远钉精确版本
 - **系统**：Windows（Git Bash）、macOS、Linux——脚本是 POSIX `bash`
 - **pnpm**：处理了 9.15 `nodeLinker` 的坑（需要 hoist 时用 `pnpm install --config.nodeLinker=hoisted`）
 
@@ -217,6 +217,17 @@ dsh-plugin-installer/
     └── _plugins.package.json   # 验证过的依赖模板
 ```
 
+## 权限与数据
+
+本技能在你的机器上安装和管理 dsh 插件。涉及范围：
+
+- **读写的文件**：你的 dsh profile（`~/.dsh/profiles/<profile>/package.json`）、patch 层（`~/.dsh/cordis.patch.yml`）、`<plugins_dir>` 下的插件目录。会编辑 profile 清单来注册插件。
+- **网络**：npm registry（安装/更新插件）与 GitHub（源码插件 git clone）。无统计、无遥测。
+- **凭据**：不存储任何东西——从不读 `.credentials.yaml` 或任何 API key。
+- **执行**：自带脚本（`bootstrap.sh`、`patch-skins.sh`、`diagnose.sh`）会在你的机器上运行 shell 命令（`npm`、`pnpm`、`git`、`node`）。
+
+本地、用户可控：没有你在 🔴 决策点点头，什么都不会替你做。
+
 ## 排查
 
 - 跑 `bash <技能目录>/scripts/diagnose.sh <插件>` 做结构化体检。
@@ -227,6 +238,8 @@ dsh-plugin-installer/
 
 发现新坑或更好的修复？欢迎 PR。`references/edge-cases.md` 保持三段式（症状 → 根因 → 修复）；上游更新时记得更新皮肤一节的版本表。
 
-## 许可证
+## 许可证与安全
 
 [MIT](./LICENSE) © 2026 zhang66633
+
+要私下报告安全问题，请在本仓库开 GitHub security advisory，而不是公开 issue。
