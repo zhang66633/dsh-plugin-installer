@@ -1,0 +1,22 @@
+# dependencies
+node_modules/
+
+# logs
+*.log
+npm-debug.log*
+
+# temp
+*.tmp
+.tmp/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# editor
+.vscode/
+.idea/
+
+# local test scratch
+/scratch/
