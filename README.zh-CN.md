@@ -87,6 +87,15 @@ git clone --depth 1 https://github.com/zhang66633/dsh-plugin-installer ~/.dsh/sk
 
 最小可复现示例：搜 `modlens` → 点安装 → 确认 → agent 报告装好 → 重启 → 发图片测试 OCR。
 
+## 刷新（两层含义）
+
+**商店页里的「刷新」按钮**是轻刷新：重新拉取目录，宿主会实时重算每个插件的「已安装 / 可更新」状态——**刚装完插件点一下刷新，不用重启 dsh 就能看到「已安装」**。按钮有悬浮说明，商店标题旁显示「更新于 <时间>」（目录数据的生成时间）。
+
+**目录数据本身的更新**（新增插件、版本信息变化）需要重新生成快照：
+
+- 维护者：运行雷达仓库的 `scripts/refresh-catalog.ps1`（discover → normalize → l1-scan → export → 重打包 → profile 重装），或交给定时任务（每日 02:00）；
+- 普通用户：等维护者发布新的 npm 版本后 `dsh plugin add dsh-plugin-installer`（钉版本）升级，目录随包更新。
+
 ## Configuration
 
 - **商店数据**：`data/store.json` 为插件目录快照（名称 / 介绍 / 原链接 / 分类 / star），随包分发，运行时不联网拉取；刷新目录 = 重建快照后重装本插件。

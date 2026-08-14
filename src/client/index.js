@@ -58,15 +58,34 @@ function StoreView({ requestInstall }) {
   const [requested, setRequested] = useState({})
   const [updated, setUpdated] = useState({})
   const [confirming, setConfirming] = useState({})
+  const [generatedAt, setGeneratedAt] = useState('')
+  const [refreshing, setRefreshing] = useState(false)
 
-  useEffect(() => {
-    let alive = true
+  // 轻刷新：重新拉取目录。宿主每次请求都实时重算 installed/可更新状态，
+  // 所以点刷新即可反映最新安装情况，无需重启 dsh web。
+  const reload = () => {
+    setRefreshing(true)
     fetch('/plugin-store/catalog.json')
       .then((r) => (r.ok ? r.json() : { plugins: [] }))
-      .then((doc) => { if (alive) setCatalog(doc.plugins ?? []) })
-      .catch(() => { if (alive) setCatalog([]) })
-    return () => { alive = false }
+      .then((d) => {
+        setCatalog(d.plugins ?? [])
+        setGeneratedAt(d.generated_at || '')
+        setRequested({})
+        setUpdated({})
+        setConfirming({})
+      })
+      .catch(() => setCatalog([]))
+      .finally(() => setRefreshing(false))
+  }
+
+  useEffect(() => {
+    reload()
   }, [])
+
+  const fmtTime = (iso) => {
+    const d = new Date(iso)
+    return Number.isNaN(d.getTime()) ? '' : d.toLocaleString('zh-CN', { hour12: false })
+  }
 
   const filtered = useMemo(() => {
     if (!catalog) return []
@@ -78,7 +97,15 @@ function StoreView({ requestInstall }) {
   return h('div', { style: S.root },
     h('div', { style: S.head },
       h('h2', { style: S.title }, '插件商店'),
-      h('span', { style: S.meta }, catalog ? `${catalog.length} 个插件` : '加载中…'),
+      h('span', { style: { display: 'flex', alignItems: 'center', gap: '10px' } },
+        h('span', { style: S.meta }, catalog ? `${catalog.length} 个插件${generatedAt ? ` · 更新于 ${fmtTime(generatedAt)}` : ''}` : '加载中…'),
+        h('button', {
+          style: S.btn,
+          onClick: reload,
+          disabled: refreshing,
+          title: '重新读取安装状态（装完插件点这里，无需重启）。目录数据本身由定时任务/刷新脚本更新，见 README。',
+        }, refreshing ? '刷新中…' : '刷新'),
+      ),
     ),
     h('input', {
       style: S.search,

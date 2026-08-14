@@ -87,6 +87,15 @@ Remove the dependency and the bundle entry from the profile `package.json`, then
 
 Minimal reproducible example: search `modlens` → click install → confirm → the agent reports success → restart → send an image to test OCR.
 
+## Refresh (two layers)
+
+The **refresh button** in the store is a light refresh: it re-fetches the catalog, and the host recomputes each plugin's installed / update-available state live — **after an install, one click shows 已安装 without restarting dsh**. The button has a hover hint, and the store header shows "updated at <time>" (the catalog snapshot's generation time).
+
+**Updating the catalog data itself** (new plugins, version changes) requires regenerating the snapshot:
+
+- Maintainer: run the radar repo's `scripts/refresh-catalog.ps1` (discover → normalize → l1-scan → export → repack → profile reinstall), or leave it to the daily scheduled task (02:00);
+- Regular user: upgrade the npm package (`dsh plugin add dsh-plugin-installer`, pin the version) when the maintainer publishes — the catalog ships with the package.
+
 ## Configuration
 
 - **Store data**: `data/store.json` is a catalog snapshot (name / description / original link / category / stars) shipped with the package; no network fetch at runtime. Refresh = rebuild the snapshot and reinstall.
