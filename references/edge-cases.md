@@ -12,7 +12,7 @@
 ## 2. pnpm 9.15 nodeLinker bug
 
 - **症状**：`pnpm-workspace.yaml` / `.npmrc` 写 `nodeLinker: hoisted`，`pnpm config get nodeLinker` 也返回 `hoisted`，但 `node_modules/.modules.yaml` 仍写 `isolated`；子依赖不 hoist 到顶层 → 顶层解析不到。
-- **根因**：pnpm 9.15.0 的 `nodeLinker` 配置在 install 时不生效（只有 CLI 显式传参生效）。
+- **根因**：pnpm 9.15.0 的 `nodeLinker` 配置在 install 时不生效（只有 CLI 显式传参生效）。本质：**pnpm 9 不读 pnpm-workspace.yaml 里承载的 nodeLinker/autoInstallPeers 等设置**（这是 pnpm ≥ 10 才支持的），只有 `.npmrc` 和 CLI 传参生效。`autoInstallPeers` 失效的另一后果见**坑 15**（peer 被实体装 → Symbol 重复 → unscoped context）。
 - **修复**：
   - 需要 hoisted 时：`pnpm install --config.nodeLinker=hoisted`（会重建布局）。
   - 通常更稳：**保持 isolated，把子插件加为 profile 直接依赖**（`pnpm add -w @scope/subpkg`），顶层就有 symlink。
@@ -138,10 +138,15 @@
 - **验证**：`dsh --profile cc-tui --dump-config` 无 `ui-skin` 引用；`--profile web` 仍含 `ui-skin-blue-fantasy` + MCP。
 - **注意**：dsh-skin shim 仍写 home——下次 `dsh-skin use <x>` 会重写回 home，需同步改 shim 目标或手动搬。
 
-## 15. agent-presets "unscoped context"（cc-tui 与 rc.6 版本错配）
+## 15. agent-presets "unscoped context"（真根因：pnpm 9 不读 workspace yaml → peer 实体化 → Symbol 重复）
 
 - **症状**：cc-tui boot 报 `agent-presets: refusing to compose an unscoped context; the scope key is what joins an agent to its preset`。
-- **根因**：`dsh-agent-presets@rc.6` 的 `mount()` 要求从 agent factory 的 `setup(agentCtx)` 调用且 agentCtx 带 scope（`@deepseek-ai/dsh-scope` 的 `scopeOf`）；cc-tui@0.3.3 的 `ctx.agents.create({setup})` 路径里 agentCtx 无 scope → 挂载拒绝。npm 上 cc-tui latest 落后仓库（0.3.3 vs 0.3.5），0.3.4/0.3.5 也未见修 scope 的 commit。
-- **修复（降级绕过）**：在 cc-tui profile 的 `cordis.patch.yml` 加 `- id: agent-presets / disabled: true` → 插件 `rosterOf(ctx)` 拿不到服务 → `composePreset` 返回 `{setup: undefined}` → 跳过挂载，TUI 以非 preset（基础）模式启动。
-- **验证**：`dsh --profile cc-tui --dump-config` 的 agent-presets 行含 `disabled: true`。
-- **注意**：这是上游错配，正确解等 cc-tui 修（用仓库新版本或 issue）。禁 agent-presets 会失去 preset 组合（工具/prompt 编排），基础模式可用。
+- **真根因**（cc-tui 维护者定位，2026-08-14）：
+  - rc.6 的 agent factory **确实建了 scope**（`dsh-agent-loop` 里 `createScope(loopCtx, this)`，`setup(agentCtx)` 收到带 scope 的上下文）——cc-tui 的 `composePreset → presets.mount(agentCtx, id)` 写法从头到尾是对的，0.3.3→0.3.6 都不用变。
+  - `@deepseek-ai/dsh-scope` 把 scope key 挂在**模块级 `Symbol("dsh.scope")`**（非 `Symbol.for`），要求全进程**同一份模块实例**。dsh 保证单例的机制：`@deepseek-ai/*` 在包里声明为 **peerDependency** + profile 的 `pnpm-workspace.yaml` 写 `autoInstallPeers: false` → peer 不实体装进 profile 树 → Node 解析回溯到 `~/.dsh/profiles/node_modules/`（dsh-app-boot 的闭包层）→ 最终到 **CLI 安装目录那份** → 同一 Symbol。
+  - **pnpm 9 不读 pnpm-workspace.yaml**（`nodeLinker` / `autoInstallPeers` 由 workspace yaml 承载是 pnpm ≥ 10 才支持的）→ `autoInstallPeers: false` 没生效 → `dsh-scope` 等 peer 被实体装进 profile 树（isolated 进 `.pnpm`，hoisted 重装后进 `node_modules/@deepseek-ai/`）→ 出现**第二份模块实例 → 两个 Symbol → `scopeOf` 必 undefined**。
+  - 同时解释了：为什么要在 pnpm 9 手动加 `ignore-workspace-root-check` 和 `--config.nodeLinker=hoisted`（workspace yaml 的设置全被无视）；为什么别人（pnpm ≥ 10）默认安装就能跑。
+- **修复（正确解）**：升级 pnpm ≥ 10（corepack：`corepack prepare pnpm@10 --activate`），然后清 profile 的 `node_modules` 重装。pnpm 10 正确读 workspace yaml 的 `autoInstallPeers: false` + `nodeLinker: hoisted` → peer 不实体化 → `dsh-scope` 解析回 CLI 单例。
+  - ⚠️ 在 pnpm 9.15 往 `.npmrc` 加 `autoInstallPeers=false` **不完全生效**（`pnpm config get` 返回 false，但 hoisted 模式下 peer 仍被实体装）。
+- **验证**：profile 目录里 `node -e "console.log(require.resolve('@deepseek-ai/dsh-scope/package.json'))"` 应指向 **CLI 安装目录**（`.../AppData/Roaming/npm/node_modules/@deepseek-ai/dsh/node_modules/@deepseek-ai/dsh-scope`），且 `node_modules/@deepseek-ai/dsh-scope` **不应存在**。
+- **注意**：之前误判为"cc-tui 写法/rc.6 版本错配"并禁 agent-presets 是**错误方向**——真根因是 pnpm 9 peer 实体化。run_code 调度器缺失是禁 preset 的次生症状，preset 正常 mount 后随组合注册，无需单独处理。上游 issue：ccch1mneyyy/dsh-TUI#26。
