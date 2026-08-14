@@ -1,6 +1,6 @@
 # dsh-plugin-installer
 
-> Install and troubleshoot plugins for **DeepSeek Harness (`dsh`)** — painlessly, even for complete beginners.
+> A **plugin store + install assistant** for DeepSeek Harness (`dsh`): browse the plugin catalog in the Web GUI, confirm an install with one click, and let the agent finish it for you.
 
 ![License: MIT](https://img.shields.io/badge/license-MIT-blue)
 ![npm](https://img.shields.io/npm/v/dsh-plugin-installer)
@@ -13,235 +13,110 @@
 
 ---
 
-## What is this?
+## Overview
 
-`dsh-plugin-installer` is a **skill** — an agent instruction package — that turns a DeepSeek Harness agent into a reliable plugin installer and error diagnostician. You describe the plugin you want; the agent understands the request, locates the source (npm or GitHub), picks the safest install path, installs, verifies, and reports back.
+`dsh-plugin-installer` is a **dual-face plugin** for dsh. One package provides two things:
 
-Everything here is **battle-tested**: every flow and edge case was validated in practice (2026-08) against the dsh `0.1.0-rc.6` ecosystem on a real machine.
+1. **Plugin store**: a 「插件商店」 tab in the Web GUI session view ring — browse and search the plugin catalog (name / description / original link / stars); clicking 安装 asks for confirmation first, then submits the install request.
+2. **Install assistant skill**: a bundled skill the agent follows to complete an install — verify the source, pick the install path, register into the profile, verify the result. Every step is explainable and reversible.
 
-## Why do you need it?
+**Who it is for**: anyone who wants to discover and install dsh plugins from the UI; developers who want the agent to handle installation and troubleshooting reliably.
 
-Installing dsh plugins by hand is full of traps that the official docs don't mention:
+## Compatibility
 
-- The npm `latest` dist-tag still points at an old `0.0.1-rc.1` — range installs break.
-- GitHub-cloned plugins carry no `node_modules` and need a **shared dependency layer** to resolve `@deepseek-ai/*` packages.
-- `cordis.patch.yml` is a *patch layer* — a new plugin instance must be wrapped in `- insert:`, or it's silently skipped.
-- The skin system (`@linxin666`) has upstream bugs that need version-conditional patches.
-- pnpm 9.15 silently ignores `nodeLinker: hoisted`.
+| Item | Support |
+| --- | --- |
+| dsh ecosystem | `0.1.0-rc.6` (last verified 2026-08) |
+| OS | Windows / macOS / Linux |
+| Node | ≥ 22.19 |
+| Surface | Web GUI (`dsh --profile web`); non-GUI profiles get the install skill only |
 
-This skill encodes all of that so you don't have to relearn it.
+## Install / Uninstall
 
-## Features
+### Install
 
-- ✅ **npm direct install** with exact-version pinning (stale-dist-tag guard)
-- ✅ **GitHub clone + register** with a one-command shared-dependency bootstrap
-- ✅ **MCP server / skill / skin** installation paths
-- ✅ **`patch-skins.sh`** — detect-before-patch, version-conditional, idempotent skin fixer
-- ✅ **`diagnose.sh`** — one-shot "is my plugin installed correctly?" check
-- ✅ **13-trap edge-case runbook** (`references/edge-cases.md`) with symptoms → root cause → fix
-- ✅ **Beginner-safe**: stops at every key decision point to ask the user
-- ✅ **Ships as a bundled skill-provider plugin** (`ctx.skills` provider; installable via `dsh plugin add`, catalog-ready)
+**Route A — full plugin (store tab + skill)**, once published to npm:
 
-## Quick start
+```bash
+dsh plugin --profile web add dsh-plugin-installer
+```
 
-### 1. Install the skill
+Local development via link:
 
-**Route A — as a skill** (filesystem discovery, zero config):
+```jsonc
+// ~/.dsh/profiles/web/package.json
+{
+  "dependencies": { "dsh-plugin-installer": "link:<repo path>" },
+  "dsh": { "profile": { "bundles": ["dsh-plugin-installer"] } }
+}
+```
+
+```bash
+cd ~/.dsh/profiles/web && pnpm install
+```
+
+**Route B — skill only** (filesystem discovery, no store UI):
 
 ```bash
 git clone --depth 1 https://github.com/zhang66633/dsh-plugin-installer ~/.dsh/skills/dsh-plugin-installer
 ```
 
-`dsh-skill-filesystem` auto-discovers skills under `~/.dsh/skills` — no registration or restart needed.
+### Upgrade
 
-**Route B — as a bundled skill-provider plugin** (also makes the repo listable in the dsh-plugin catalog):
+- Route A: re-run `dsh plugin add` (pin the version); for local links, `git pull` and rebuild.
+- Route B: `git pull`.
 
-```bash
-# published on npm as dsh-plugin-installer@1.1.0:
-dsh plugin --profile <profile> add dsh-plugin-installer
-# or link it for local development:
-#   ~/.dsh/profiles/<profile>/package.json → "dependencies": { "dsh-plugin-installer": "link:<repo>" }
-#   + add "dsh-plugin-installer" to dsh.profile.bundles
-cd ~/.dsh/profiles/<profile> && pnpm install
-```
+### Disable
 
-Both routes expose the same skill; Route B registers it through a `ctx.skills` bundled provider, which also makes this repo eligible for the [awesome-dsh-plugins](https://github.com/AdamPlatin123/awesome-dsh-plugins) 🎓 技能 catalog.
+Remove `dsh-plugin-installer` from `dsh.profile.bundles` (the dependency may stay).
 
-### 2. Ask your agent
+### Uninstall
 
-> 「帮我装个 XX 插件」 / "install the XX plugin for me"
+Remove the dependency and the bundle entry from the profile `package.json`, then `pnpm install`; for Route B, delete `~/.dsh/skills/dsh-plugin-installer`.
 
-The skill takes over and walks through: understand the request → locate the source → choose the install path → install → verify → report.
+## Quick start
 
-## Tutorial — install a real plugin from GitHub
+1. Install, then restart `dsh web`.
+2. Open any session — the **plugin store** tab appears in the view ring (next to chat/trajectory).
+3. Search for a plugin (e.g. `vision`), click **安装**, confirm the prompt, and the current session's agent takes over the install.
+4. Restart `dsh web` after the install completes.
 
-### Step 1 · Create the shared dependency layer (one-time)
-
-Cloned plugins carry no `node_modules`. Node resolves dependencies by walking **up** from a module's real path, so a common ancestor directory holding a `node_modules` becomes the public resolution layer. Create it in one command:
-
-```bash
-bash <skill-dir>/scripts/bootstrap.sh
-# plugins dir defaults to ~/.dsh/plugins; override with DSH_PLUGINS_DIR
-```
-
-This scaffolds `<plugins_dir>/package.json` from a verified template (all `@deepseek-ai/*` at `0.1.0-rc.6`, `cordis`/`schemastery` variants, `react-dom@18.3.1` to prevent the react 19 conflict) and runs `npm install`.
-
-### Step 2 · Clone + inspect
-
-```bash
-git clone --depth 1 https://github.com/<owner>/<repo>.git <plugins_dir>/<name>
-cd <plugins_dir>/<name>
-node -e "const p=require('./package.json'); console.log(JSON.stringify({name:p.name, main:p.main, dsh:p.dsh, deps:p.dependencies},null,1))"
-ls lib/ 2>/dev/null
-```
-
-Judgment:
-- ✅ **Ready to register** — `dsh.bundle.patch` + `cordis.patch.yml` + `lib/index.js` present
-- ⚠️ **Unbuilt** — `dsh.bundle` exists but `lib/` is empty → `npm install && npm run build`
-- ❌ **Broken publish** — `lib/index.js` imports a missing chunk → skip or build from source
-
-### Step 3 · Fill the shared deps
-
-```bash
-grep -rhoE "from ['\"]([^./][^'\"]*)" lib/ | sed "s/from ['\"]//" | sed 's#/.*##' | sort -u
-cd <plugins_dir> && npm install   # after adding any missing deps to package.json
-```
-
-### Step 4 · Register in the profile
-
-Edit `~/.dsh/profiles/<profile>/package.json` (profile defaults to `web`):
-
-```jsonc
-{
-  "dependencies": {
-    "<plugin-name>": "link:<plugins_dir>/<name>"
-  },
-  "dsh": {
-    "profile": {
-      "bundles": ["<plugin-name>"]
-    }
-  }
-}
-```
-
-```bash
-cd ~/.dsh/profiles/<profile> && pnpm install
-```
-
-### Step 5 · Verify
-
-```bash
-dsh --profile <profile> --dump-config 2>&1 | grep -A2 <name>   # appears in the tree
-dsh web                                                       # boots clean
-bash <skill-dir>/scripts/diagnose.sh <name>                    # full checklist
-```
+Minimal reproducible example: search `modlens` → click install → confirm → the agent reports success → restart → send an image to test OCR.
 
 ## Configuration
 
-### Environment variables
-
-| Variable | Default | Purpose |
-|---|---|---|
-| `DSH_PLUGINS_DIR` | `~/.dsh/plugins` | Where cloned plugins + the shared `node_modules` live |
-| `DSH_PROFILE` | `web` | dsh profile to register plugins into |
-
-### MCP servers
-
-Add an MCP server in the profile's `cordis.patch.yml` — **always wrapped in `- insert:`**:
-
-```yaml
-- insert:
-    - id: mcp-context7
-      name: '@deepseek-ai/dsh-mcp-client'
-      config:
-        serverName: context7
-        transport: stdio
-        command: npx
-        args: ['-y', '@upstash/context7-mcp']
-```
-
-For HTTP servers, use `transport: streamable-http` + `url` (tokens via `!!js '`${process.env.XXX}`'`).
-
-### Skins
-
-`@linxin666/dsh-skins` has upstream bugs (skin bundles 404/500, apply 400). Fix in one shot with the version-conditional patcher:
-
-```bash
-bash <skill-dir>/scripts/patch-skins.sh          # detect → patch (idempotent)
-bash <skill-dir>/scripts/patch-skins.sh --check  # report only
-```
-
-It never blind-patches: if upstream fixes the bug, re-running it detects that and skips.
-
-## Uninstall
-
-- **As a skill**: `rm -rf ~/.dsh/skills/dsh-plugin-installer`
-- **As a plugin**: remove the dependency and the `dsh.profile.bundles` entry from `~/.dsh/profiles/<profile>/package.json`, then
-
-  ```bash
-  cd ~/.dsh/profiles/<profile> && pnpm install
-  ```
-
-## How it works
-
-The core trick is the **shared dependency layer**. Plugins cloned from GitHub are symlinked into a profile via `link:`. At runtime, Node resolves each plugin's `@deepseek-ai/*` imports by walking up from the plugin's real path — so a single `<plugins_dir>/node_modules` at the common ancestor satisfies all of them. New plugins plug in by adding their missing deps to that one `package.json` and re-running `npm install`.
-
-Patch management is **version-conditional**: each patch carries a marker in the installed file; the script detects *already patched* / *upstream fixed* / *needs patch* before touching anything, so upgrades and reinstalls converge on the next run.
-
-## Compatibility
-
-- **dsh ecosystem**: `0.1.0-rc.6` — **last verified 2026-08-14** (skill body + plugin load + `dsh --dump-config`). The npm `latest` tag is stale — always pin exact versions.
-- **OS**: Windows (Git Bash), macOS, Linux — scripts are POSIX `bash`
-- **pnpm**: 9.15 `nodeLinker` quirk handled (use `pnpm install --config.nodeLinker=hoisted` when you need hoisting)
-
-## Repository layout
-
-```
-dsh-plugin-installer/
-├── package.json                # plugin manifest (dsh.bundle.patch → cordis.patch.yml)
-├── cordis.patch.yml            # patch layer: inserts the plugin instance
-├── lib/
-│   ├── index.js                # cordis plugin: registers the bundled skill provider
-│   └── skills.js               # provider: scans skills/, parses SKILL.md frontmatter
-├── skills/
-│   └── dsh-plugin-installer/
-│       └── SKILL.md            # the skill itself
-├── references/
-│   ├── install-flow.md         # full install procedures (npm / GitHub / MCP / skill / skin)
-│   ├── edge-cases.md           # 13-trap runbook with fixes
-│   ├── diagnostics.md          # error triage table + commands
-│   └── github-access.md        # GitHub access strategy (git clone over curl)
-├── scripts/
-│   ├── bootstrap.sh            # scaffold the shared dependency layer
-│   ├── patch-skins.sh          # version-conditional skin fixer
-│   └── diagnose.sh             # plugin health check
-└── templates/
-    └── _plugins.package.json   # verified dependency template
-```
+- **Store data**: `data/store.json` is a catalog snapshot (name / description / original link / category / stars) shipped with the package; no network fetch at runtime. Refresh = rebuild the snapshot and reinstall.
+- **Install request**: clicking 安装 only POSTs a JSON request (plugin name + session id) to the local `/plugin-store/install` route; the actual install is performed by the current session's agent.
+- No other config, no environment variables, no secrets.
 
 ## Permissions & data
 
-This skill installs and manages dsh plugins on your machine. What it touches:
-
-- **Files read/written**: your dsh profile (`~/.dsh/profiles/<profile>/package.json`), patch layers (`~/.dsh/cordis.patch.yml`), and plugin directories under `<plugins_dir>`. It edits profile manifests to register plugins.
-- **Network**: npm registry (install/update plugins) and GitHub (git clone for source plugins). No analytics, no telemetry.
-- **Credentials**: none stored — it never reads `.credentials.yaml` or any API keys.
-- **Execution**: the bundled scripts (`bootstrap.sh`, `patch-skins.sh`, `diagnose.sh`) run shell commands (`npm`, `pnpm`, `git`, `node`) on your machine.
-
-It is a local, user-controlled tool: nothing runs without your go-ahead at a 🔴 decision point.
+- Host process: **read-only** access to the bundled `data/store.json`; the catalog and install routes bind to the local web server only.
+- After an install is triggered, the **agent** runs the install commands (it may read/write your dsh profile and plugin directories, and reach npm / GitHub) — every step is visible and can be stopped.
+- No telemetry, no analytics, no credential access.
 
 ## Troubleshooting
 
-- Run `bash <skill-dir>/scripts/diagnose.sh <plugin>` for a structured health check.
-- Consult `references/edge-cases.md` for symptoms → root cause → fix on 13 real traps (stale dist-tags, pnpm nodeLinker, `- insert:` requirement, broken publishes, GitHub SSL, missing `httpServer`, skin bugs, and more).
-- Hit something new? Add it to `edge-cases.md` — the skill is a living runbook.
+| Symptom | Action |
+| --- | --- |
+| Store tab missing | Confirm `dsh.profile.bundles` includes `dsh-plugin-installer`; check `dsh --profile web --dump-config`; restart |
+| 安装 does nothing | Confirm the session has a live agent; check the `/plugin-store/install` response in the browser console |
+| Rollback | Remove the bundle entry and run `pnpm install` — the rest of the profile is untouched |
 
-## Contributing
+## Development
 
-Found a new trap or a better fix? PRs welcome. Keep the three-part format (symptom → root cause → fix) in `references/edge-cases.md`, and update the version table in the skin section when upstream moves.
+```bash
+npm install          # build tooling (esbuild)
+npm run build        # build lib/client.js (client wire bundle)
+npm run check        # script syntax/standards checks
+npm test             # unit tests
+npm run smoke        # smoke: load lib/index.js and print name/inject
+```
+
+Store snapshot refresh: update `data/store.json`, rebuild, and reinstall. Pull requests welcome; keep README and tests in sync with behavior changes.
 
 ## License & security
 
 [MIT](./LICENSE) © 2026 zhang66633
 
-To report a security issue privately, open a GitHub security advisory on this repo rather than a public issue.
+Report security issues privately via a GitHub **security advisory**, not a public issue.
