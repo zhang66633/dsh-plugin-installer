@@ -38,16 +38,32 @@
 - ✅ **`diagnose.sh`** —— 一键体检"插件装没装对"
 - ✅ **13 个坑的完整配方**（`references/edge-cases.md`，症状 → 根因 → 修复）
 - ✅ **小白安全**：每个关键决策点停下来问你
+- ✅ **打包成技能提供方插件**（`ctx.skills` provider；可 `dsh plugin add` 安装，进目录就绪）
 
 ## 快速开始
 
 ### 1. 安装技能
 
+**路线 A —— 作为技能**（文件系统发现，零配置）：
+
 ```bash
 git clone --depth 1 https://github.com/zhang66633/dsh-plugin-installer ~/.dsh/skills/dsh-plugin-installer
 ```
 
-`dsh-skill-filesystem` 自动扫描 `~/.dsh/skills`，无需注册、无需重启（provider 有 watch）。
+`dsh-skill-filesystem` 自动扫描 `~/.dsh/skills`，无需注册、无需重启。
+
+**路线 B —— 作为打包技能的插件**（同时让仓库能进 dsh 插件目录）：
+
+```bash
+# 发布到 npm 后：
+dsh plugin --profile <profile> add dsh-plugin-installer
+# 本地开发直接 link：
+#   ~/.dsh/profiles/<profile>/package.json → "dependencies": { "dsh-plugin-installer": "link:<仓库>" }
+#   + dsh.profile.bundles 加 "dsh-plugin-installer"
+cd ~/.dsh/profiles/<profile> && pnpm install
+```
+
+两条路线暴露同一个技能；路线 B 通过 `ctx.skills` bundled provider 注册，也让本仓库具备进入 [awesome-dsh-plugins](https://github.com/AdamPlatin123/awesome-dsh-plugins) 🎓 技能 类目的资格。
 
 ### 2. 让 agent 干活
 
@@ -155,6 +171,15 @@ bash <技能目录>/scripts/patch-skins.sh --check  # 只报告，不打
 
 绝不盲打：上游修了的话，重跑会检测到并跳过。
 
+## 卸载
+
+- **作为技能**：`rm -rf ~/.dsh/skills/dsh-plugin-installer`
+- **作为插件**：从 `~/.dsh/profiles/<profile>/package.json` 移除依赖和 `dsh.profile.bundles` 条目，然后
+
+  ```bash
+  cd ~/.dsh/profiles/<profile> && pnpm install
+  ```
+
 ## 工作原理
 
 核心是**共享依赖层**。GitHub clone 的插件通过 `link:` 注册进 profile；运行时 Node 从插件真实路径向上解析 `@deepseek-ai/*`，于是共同的祖先目录里的一个 `<plugins_dir>/node_modules` 就满足所有插件。新插件装进来，只需把缺的依赖加进那一个 `package.json` 再 `npm install`。
@@ -171,9 +196,14 @@ bash <技能目录>/scripts/patch-skins.sh --check  # 只报告，不打
 
 ```
 dsh-plugin-installer/
-├── SKILL.md                    # 主指令（技能入口）
-├── README.md                   # English README
-├── README.zh-CN.md             # 本文档
+├── package.json                # 插件清单（dsh.bundle.patch → cordis.patch.yml）
+├── cordis.patch.yml            # patch 层：插入插件实例
+├── lib/
+│   ├── index.js                # cordis 插件：注册 bundled 技能 provider
+│   └── skills.js               # provider：扫描 skills/，解析 SKILL.md frontmatter
+├── skills/
+│   └── dsh-plugin-installer/
+│       └── SKILL.md            # 技能本体
 ├── references/
 │   ├── install-flow.md         # 完整安装流程（npm / GitHub / MCP / 技能 / 皮肤）
 │   ├── edge-cases.md           # 13 个坑的完整配方

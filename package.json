@@ -1,0 +1,34 @@
+{
+  "name": "dsh-plugin-installer",
+  "version": "1.1.0",
+  "description": "Install & troubleshoot DeepSeek Harness (dsh) plugins — painlessly, even for complete beginners. Ships as a bundled skill-provider plugin.",
+  "type": "module",
+  "main": "lib/index.js",
+  "files": [
+    "lib",
+    "skills",
+    "references",
+    "scripts",
+    "templates",
+    "cordis.patch.yml",
+    "README.md",
+    "README.zh-CN.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "smoke": "node -e \"import('./lib/index.js').then(m => console.log('ok:', m.name, 'inject:', m.inject.join(',')))\""
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "^4.0.1",
+    "@deepseek-ai/dsh-skill": "^0.1.0-rc.6"
+  },
+  "dependencies": {
+    "yaml": "^2.5.0"
+  },
+  "license": "MIT"
+}

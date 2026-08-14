@@ -38,16 +38,32 @@ This skill encodes all of that so you don't have to relearn it.
 - ✅ **`diagnose.sh`** — one-shot "is my plugin installed correctly?" check
 - ✅ **13-trap edge-case runbook** (`references/edge-cases.md`) with symptoms → root cause → fix
 - ✅ **Beginner-safe**: stops at every key decision point to ask the user
+- ✅ **Ships as a bundled skill-provider plugin** (`ctx.skills` provider; installable via `dsh plugin add`, catalog-ready)
 
 ## Quick start
 
 ### 1. Install the skill
 
+**Route A — as a skill** (filesystem discovery, zero config):
+
 ```bash
 git clone --depth 1 https://github.com/zhang66633/dsh-plugin-installer ~/.dsh/skills/dsh-plugin-installer
 ```
 
-`dsh-skill-filesystem` auto-discovers skills under `~/.dsh/skills` — no registration or restart needed (the provider watches the directory).
+`dsh-skill-filesystem` auto-discovers skills under `~/.dsh/skills` — no registration or restart needed.
+
+**Route B — as a bundled skill-provider plugin** (also makes the repo listable in the dsh-plugin catalog):
+
+```bash
+# once published to npm:
+dsh plugin --profile <profile> add dsh-plugin-installer
+# or link it for local development:
+#   ~/.dsh/profiles/<profile>/package.json → "dependencies": { "dsh-plugin-installer": "link:<repo>" }
+#   + add "dsh-plugin-installer" to dsh.profile.bundles
+cd ~/.dsh/profiles/<profile> && pnpm install
+```
+
+Both routes expose the same skill; Route B registers it through a `ctx.skills` bundled provider, which also makes this repo eligible for the [awesome-dsh-plugins](https://github.com/AdamPlatin123/awesome-dsh-plugins) 🎓 技能 catalog.
 
 ### 2. Ask your agent
 
@@ -155,6 +171,15 @@ bash <skill-dir>/scripts/patch-skins.sh --check  # report only
 
 It never blind-patches: if upstream fixes the bug, re-running it detects that and skips.
 
+## Uninstall
+
+- **As a skill**: `rm -rf ~/.dsh/skills/dsh-plugin-installer`
+- **As a plugin**: remove the dependency and the `dsh.profile.bundles` entry from `~/.dsh/profiles/<profile>/package.json`, then
+
+  ```bash
+  cd ~/.dsh/profiles/<profile> && pnpm install
+  ```
+
 ## How it works
 
 The core trick is the **shared dependency layer**. Plugins cloned from GitHub are symlinked into a profile via `link:`. At runtime, Node resolves each plugin's `@deepseek-ai/*` imports by walking up from the plugin's real path — so a single `<plugins_dir>/node_modules` at the common ancestor satisfies all of them. New plugins plug in by adding their missing deps to that one `package.json` and re-running `npm install`.
@@ -171,9 +196,14 @@ Patch management is **version-conditional**: each patch carries a marker in the 
 
 ```
 dsh-plugin-installer/
-├── SKILL.md                    # main agent instructions (the skill entry)
-├── README.md                   # this file
-├── README.zh-CN.md             # 简体中文 README
+├── package.json                # plugin manifest (dsh.bundle.patch → cordis.patch.yml)
+├── cordis.patch.yml            # patch layer: inserts the plugin instance
+├── lib/
+│   ├── index.js                # cordis plugin: registers the bundled skill provider
+│   └── skills.js               # provider: scans skills/, parses SKILL.md frontmatter
+├── skills/
+│   └── dsh-plugin-installer/
+│       └── SKILL.md            # the skill itself
 ├── references/
 │   ├── install-flow.md         # full install procedures (npm / GitHub / MCP / skill / skin)
 │   ├── edge-cases.md           # 13-trap runbook with fixes

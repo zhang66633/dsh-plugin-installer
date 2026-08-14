@@ -7,7 +7,7 @@ description: 帮助用户（含完全小白）在 DeepSeek Harness（dsh）里�
 
 在 DeepSeek Harness（`dsh`）里给用户安装插件，并诊断安装/运行报错。面向完全小白：每一步解释清楚，关键决策点停下来问用户再动手。
 
-> 本文档沉淀了**已验证**的安装流程和全部踩过的坑（2026-08 实践）。遵循它，不要凭空发明步骤。深度参考见 `references/` 目录，按需读取。
+> 本文档沉淀了**已验证**的安装流程和全部踩过的坑（2026-08 实践）。遵循它，不要凭空发明步骤。深度参考见 `<技能目录>/references/` 目录，按需读取。`<技能目录>` = 本技能所在目录（插件包根目录）。
 
 ## 何时使用
 
@@ -23,10 +23,10 @@ description: 帮助用户（含完全小白）在 DeepSeek Harness（dsh）里�
 | `curl` 到 github.com 报 **exit 35 SSL 错**（走坏代理） | 一切 GitHub 下载优先 git，其次 jsDelivr |
 | npm registry（npmmirror）可用；**`latest` dist-tag 是旧的 `0.0.1-rc.1`** | **必须钉精确版本**（`0.1.0-rc.6`），用范围会装错 |
 | dsh 插件分两类装法 | npm 直装（`dsh plugin add`）或 GitHub clone + link 注册 |
-| 插件目录从不自带 node_modules | clone 源码后要靠**共享 `_plugins/node_modules`** 解析依赖 |
+| 插件目录从不自带 node_modules | clone 源码后要靠**共享 `<plugins_dir>/node_modules`** 解析依赖 |
 | `cordis.patch.yml` 是 patch 层 | **新增插件实例必须包在 `- insert:` 里**，顶层裸条目会被静默跳过 |
 | dsh 读两层 patch | home 级 `~/.dsh/cordis.patch.yml`（全局）+ profile 级 `~/.dsh/profiles/<profile>/cordis.patch.yml` |
-| 已打补丁可能被上游修复 | 补丁**版本条件化**：检测先于打补丁，重跑 `scripts/patch-skins.sh` 自动收敛，不盲打 |
+| 已打补丁可能被上游修复 | 补丁**版本条件化**：检测先于打补丁，重跑 `<技能目录>/scripts/patch-skins.sh` 自动收敛，不盲打 |
 | 路径可配置 | 插件目录 `<plugins_dir>` 默认 `~/.dsh/plugins`（`DSH_PLUGINS_DIR` 覆盖）；profile `<profile>` 默认 `web`（`DSH_PROFILE` 覆盖） |
 
 ## 决策流程（关键决策点停问）
@@ -48,10 +48,10 @@ description: 帮助用户（含完全小白）在 DeepSeek Harness（dsh）里�
 ### A. npm 直装（标准，最快）
 
 ```bash
-dsh plugin --profile web add <pkg>          # = pnpm add 到 profile
+dsh plugin --profile <profile> add <pkg>          # = pnpm add 到 profile
 ```
 
-- **坑：stale dist-tag**。若 `npm view <pkg> version` 返回 `0.0.1-rc.1` 但生态是 `0.1.0-rc.6`，必须钉版本：`dsh plugin --profile web add <pkg>@0.1.0-rc.6`。
+- **坑：stale dist-tag**。若 `npm view <pkg> version` 返回 `0.0.1-rc.1` 但生态是 `0.1.0-rc.6`，必须钉版本：`dsh plugin --profile <profile> add <pkg>@0.1.0-rc.6`。
 - **坑：聚合包要拆**。聚合包（如 `@linxin666/dsh-web-ui-all`）若含坏子包，改为逐个注册可用子包到 `dsh.profile.bundles`（跳过坏的）。
 - 装完若插件要出现在 GUI，确认它在 profile `package.json` 的 `dsh.profile.bundles` 里。
 
@@ -62,10 +62,10 @@ dsh plugin --profile web add <pkg>          # = pnpm add 到 profile
 ```bash
 bash <技能目录>/scripts/bootstrap.sh
 # 插件目录默认 ~/.dsh/plugins（DSH_PLUGINS_DIR 可改）；profile 默认 web（DSH_PROFILE 可改）
-# 或手动（模板在 templates/_plugins.package.json，含全部验证过的依赖）
+# 或手动（模板在 <技能目录>/templates/_plugins.package.json，含全部验证过的依赖）
 ```
 
-`bootstrap.sh` 会：建 `_plugins/` → 写入验证过的 `package.json` 模板 → `npm install` 产出共享 `node_modules` → 提示下一步。模板含：各插件的 `@deepseek-ai/*`（钉 `0.1.0-rc.6`，`cordis@4.0.1`、`schemastery@3.18.1` 例外）+ 裸包 `cordis`/`schemastery` + `react-dom@18.3.1`（防 react 19 冲突）+ 常见插件自身依赖。
+`bootstrap.sh` 会：建 `<plugins_dir>/` → 写入验证过的 `package.json` 模板 → `npm install` 产出共享 `node_modules` → 提示下一步。模板含：各插件的 `@deepseek-ai/*`（钉 `0.1.0-rc.6`，`cordis@4.0.1`、`schemastery@3.18.1` 例外）+ 裸包 `cordis`/`schemastery` + `react-dom@18.3.1`（防 react 19 冲突）+ 常见插件自身依赖。
 
 然后对每个插件：
 
@@ -83,15 +83,17 @@ bash <技能目录>/scripts/bootstrap.sh
 
 ### C. 装 MCP 服务器 / 技能 / 非插件资源
 
-- **MCP**：在 profile 的 `cordis.patch.yml` 用 `- insert:` 加 `@deepseek-ai/dsh-mcp-client` 实例（见 `references/install-flow.md`）
-- **技能**：复制到 `~/.dsh/skills/<skill>/`（含 SKILL.md + frontmatter），dsh 自动发现
-- **皮肤**：`@linxin666/dsh-skins` 生态有上游 bug，一键 `bash <技能目录>/scripts/patch-skins.sh`（检测先于打补丁，幂等），配方见 `references/edge-cases.md`
+- **MCP**：在 profile 的 `cordis.patch.yml` 用 `- insert:` 加 `@deepseek-ai/dsh-mcp-client` 实例（见 `<技能目录>/references/install-flow.md`）
+- **技能**：两条路都行——
+  - 复制到 `~/.dsh/skills/<skill>/`（含 SKILL.md + frontmatter），`dsh-skill-filesystem` 自动发现
+  - 或装成**打包技能的插件**（本技能即如此）：`dsh plugin --profile <profile> add dsh-plugin-installer`，经 `ctx.skills` provider 注册，装完即用
+- **皮肤**：`@linxin666/dsh-skins` 生态有上游 bug，一键 `bash <技能目录>/scripts/patch-skins.sh`（检测先于打补丁，幂等），配方见 `<技能目录>/references/edge-cases.md`
 
 ## 验证清单
 
 ```bash
 # 1. 组合树里有插件、无 patch 报错
-dsh --profile web --dump-config 2>&1 | grep -A2 "插件名"        # 出现即注册成功
+dsh --profile <profile> --dump-config 2>&1 | grep -A2 "插件名"        # 出现即注册成功
 # 2. 启动干净（无 "plugin tree failed to load"）
 dsh web          # 看到 "dsh web: http://127.0.0.1:3080" 即成功
 # 3. 浏览器控制台无 404/500；或检查：
@@ -99,20 +101,20 @@ curl -s http://127.0.0.1:3080/_api/plugins | grep '"id":"<插件名>"'   # clien
 # 4. 该插件的 client bundle 伺服 200
 ```
 
-## 边缘情况速查（完整版见 references/edge-cases.md）
+## 边缘情况速查（完整版见 `<技能目录>/references/edge-cases.md`）
 
 | 症状 | 原因 | 处理 |
 |---|---|---|
 | `latest` dist-tag 装错版本 | npm `latest` 指旧 rc | 钉 `0.1.0-rc.6` |
 | `nodeLinker` 配置不生效 | pnpm 9.15 bug | `pnpm install --config.nodeLinker=hoisted` 或子插件加为直接依赖 |
 | patch "entry not found" | patch 层裸条目 | 包 `- insert:` |
-| `ERR_MODULE_NOT_FOUND` | 插件缺依赖 | 补进 `_plugins/package.json` |
+| `ERR_MODULE_NOT_FOUND` | 插件缺依赖 | 补进 `<plugins_dir>/package.json` |
 | npm 包缺 chunk（`state-*.js`） | 坏发布 | 跳过或用源码版 |
 | 包名撞车 | 两个同 `@scope/name` | 放弃其一 |
 | `react-dom` 冲突 | 钉 react@18 但 npm 挑 19 | 显式钉 `react-dom@18.3.1` |
 | curl 到 GitHub 报 exit 35 | 代理 SSL | 用 git clone / jsDelivr |
 | `/_dsh/*` 路由 404 返回 HTML | 插件要 `httpServer` 服务 | 装 `dsh-http-server-bridge` 桥接插件 |
-| 皮肤 apply 400 / bundle 500 | skin-center 上游路径 bug | `scripts/patch-skins.sh`（walk-up 补丁，版本条件化，幂等重跑） |
+| 皮肤 apply 400 / bundle 500 | skin-center 上游路径 bug | `<技能目录>/scripts/patch-skins.sh`（walk-up 补丁，版本条件化，幂等重跑） |
 | memory-evolve 404 | 功能默认关闭（正常） | 不用管，用户开启功能即出现 |
 | 控制台 "Unexpected token '<'" | fetch 到 HTML 当 JSON | 路由没挂 → 用桥接/查该插件 README |
 
@@ -123,7 +125,7 @@ curl -s http://127.0.0.1:3080/_api/plugins | grep '"id":"<插件名>"'   # clien
 ---
 
 深度参考（按需读取）：
-- `references/install-flow.md` — 安装流程完整细节（含 MCP/技能/皮肤）
-- `references/edge-cases.md` — 全部坑的完整修复配方
-- `references/diagnostics.md` — 报错分诊表 + 排查命令
-- `references/github-access.md` — GitHub 访问策略与镜像
+- `<技能目录>/references/install-flow.md` — 安装流程完整细节（含 MCP/技能/皮肤）
+- `<技能目录>/references/edge-cases.md` — 全部坑的完整修复配方
+- `<技能目录>/references/diagnostics.md` — 报错分诊表 + 排查命令
+- `<技能目录>/references/github-access.md` — GitHub 访问策略与镜像
