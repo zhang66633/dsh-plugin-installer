@@ -22,6 +22,10 @@
 
 **适合谁**：想在图形界面里发现并安装 dsh 插件的所有用户；希望让 agent 可靠完成安装与排障的开发者。
 
+<p align="center">
+  <img src="assets/store-screenshot.png" alt="插件商店界面" width="760" />
+</p>
+
 ## Compatibility
 
 | 项 | 支持范围 |

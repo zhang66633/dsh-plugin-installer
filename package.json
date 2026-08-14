@@ -11,6 +11,7 @@
     "scripts",
     "templates",
     "data",
+    "assets",
     "cordis.patch.yml",
     "README.md",
     "README.zh-CN.md",

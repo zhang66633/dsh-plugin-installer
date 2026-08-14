@@ -22,6 +22,10 @@
 
 **Who it is for**: anyone who wants to discover and install dsh plugins from the UI; developers who want the agent to handle installation and troubleshooting reliably.
 
+<p align="center">
+  <img src="assets/store-screenshot.png" alt="Plugin store UI" width="760" />
+</p>
+
 ## Compatibility
 
 | Item | Support |
