@@ -3,6 +3,7 @@
 > 在 **DeepSeek Harness（`dsh`）** 里安装与排查插件——小白也能装得明明白白。
 
 ![License: MIT](https://img.shields.io/badge/license-MIT-blue)
+![npm](https://img.shields.io/npm/v/dsh-plugin-installer)
 ![dsh](https://img.shields.io/badge/dsh-0.1.0--rc.6-green)
 ![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux-lightgrey)
 ![Docs](https://img.shields.io/badge/docs-简体中文%20%7C%20English-informational)
@@ -55,7 +56,7 @@ git clone --depth 1 https://github.com/zhang66633/dsh-plugin-installer ~/.dsh/sk
 **路线 B —— 作为打包技能的插件**（同时让仓库能进 dsh 插件目录）：
 
 ```bash
-# 发布到 npm 后：
+# 已在 npm 发布为 dsh-plugin-installer@1.1.0：
 dsh plugin --profile <profile> add dsh-plugin-installer
 # 本地开发直接 link：
 #   ~/.dsh/profiles/<profile>/package.json → "dependencies": { "dsh-plugin-installer": "link:<仓库>" }

@@ -3,6 +3,7 @@
 > Install and troubleshoot plugins for **DeepSeek Harness (`dsh`)** — painlessly, even for complete beginners.
 
 ![License: MIT](https://img.shields.io/badge/license-MIT-blue)
+![npm](https://img.shields.io/npm/v/dsh-plugin-installer)
 ![dsh](https://img.shields.io/badge/dsh-0.1.0--rc.6-green)
 ![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux-lightgrey)
 ![Docs](https://img.shields.io/badge/docs-English%20%7C%20简体中文-informational)
@@ -55,7 +56,7 @@ git clone --depth 1 https://github.com/zhang66633/dsh-plugin-installer ~/.dsh/sk
 **Route B — as a bundled skill-provider plugin** (also makes the repo listable in the dsh-plugin catalog):
 
 ```bash
-# once published to npm:
+# published on npm as dsh-plugin-installer@1.1.0:
 dsh plugin --profile <profile> add dsh-plugin-installer
 # or link it for local development:
 #   ~/.dsh/profiles/<profile>/package.json → "dependencies": { "dsh-plugin-installer": "link:<repo>" }
