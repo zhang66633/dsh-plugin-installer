@@ -129,3 +129,19 @@
 - **症状**：有 `dsh.bundle` 但 `lib/` 空或缺文件。
 - **修复**：`cd <插件> && npm install && npm run build`。可能因 peer 版本冲突 tsc 失败 → 单独跑 bundler 跳过类型检查（如 `npx tsdown`）生成资源。
 - **例子**：genui 的 `lib/assets/mermaid.js` 缺失 → `npx tsdown`（跳过失败的 tsc）生成 3.39MB asset。
+
+## 14. home 级皮肤 patch 污染所有 profile
+
+- **症状**：新建的非 web profile（如 `cc-tui`）boot 报 `Cannot find package '@linxin666/dsh-client-ui-skin-<x>' imported from <profile>\`。
+- **根因**：dsh-skin shim 把"激活皮肤"段（`- insert: ui-skin-blue-fantasy → @linxin666/dsh-client-ui-skin-blue-fantasy` + 一串 `disabled: true`）写到 **home 级 `~/.dsh/cordis.patch.yml`**，它对**所有 profile** 生效；只有 web profile 装了皮肤包，其他 profile 解析不到。
+- **修复**：把 `# --- dsh-skin managed ---` 整段从 home 移到 **web profile** 的 `cordis.patch.yml`（皮肤只属于 GUI 的 web profile）。home 留 `[]`。
+- **验证**：`dsh --profile cc-tui --dump-config` 无 `ui-skin` 引用；`--profile web` 仍含 `ui-skin-blue-fantasy` + MCP。
+- **注意**：dsh-skin shim 仍写 home——下次 `dsh-skin use <x>` 会重写回 home，需同步改 shim 目标或手动搬。
+
+## 15. agent-presets "unscoped context"（cc-tui 与 rc.6 版本错配）
+
+- **症状**：cc-tui boot 报 `agent-presets: refusing to compose an unscoped context; the scope key is what joins an agent to its preset`。
+- **根因**：`dsh-agent-presets@rc.6` 的 `mount()` 要求从 agent factory 的 `setup(agentCtx)` 调用且 agentCtx 带 scope（`@deepseek-ai/dsh-scope` 的 `scopeOf`）；cc-tui@0.3.3 的 `ctx.agents.create({setup})` 路径里 agentCtx 无 scope → 挂载拒绝。npm 上 cc-tui latest 落后仓库（0.3.3 vs 0.3.5），0.3.4/0.3.5 也未见修 scope 的 commit。
+- **修复（降级绕过）**：在 cc-tui profile 的 `cordis.patch.yml` 加 `- id: agent-presets / disabled: true` → 插件 `rosterOf(ctx)` 拿不到服务 → `composePreset` 返回 `{setup: undefined}` → 跳过挂载，TUI 以非 preset（基础）模式启动。
+- **验证**：`dsh --profile cc-tui --dump-config` 的 agent-presets 行含 `disabled: true`。
+- **注意**：这是上游错配，正确解等 cc-tui 修（用仓库新版本或 issue）。禁 agent-presets 会失去 preset 组合（工具/prompt 编排），基础模式可用。
