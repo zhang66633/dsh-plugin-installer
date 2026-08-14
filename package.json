@@ -16,7 +16,10 @@
     "LICENSE"
   ],
   "scripts": {
-    "smoke": "node -e \"import('./lib/index.js').then(m => console.log('ok:', m.name, 'inject:', m.inject.join(',')))\""
+    "smoke": "node -e \"import('./lib/index.js').then(m => console.log('ok:', m.name, 'inject:', m.inject.join(',')))\"",
+    "check": "bash scripts/check.sh",
+    "test": "node --test",
+    "prepublishOnly": "npm run check && npm run test && npm run smoke"
   },
   "dsh": {
     "bundle": {
