@@ -168,3 +168,10 @@
 - **根因**：`dsh plugin add` 重写 bundles 列表时只保留安装自有的 bundle，把出树的 link: 插件丢出列表（dependencies 不动，只动 bundles）。
 - **修复**：add 后手动把丢掉的 bundle 名加回 `dsh.profile.bundles`（放 web-app 之后、按需排序）。
 - **验证**：`dsh --profile web --dump-config` 里新旧插件都在。
+
+## 18. ctx.get() 可选服务在 apply 时拿不到（fiber 未激活）
+
+- **症状**：宿主半边用 `ctx.get('webServer')` 之类"可选服务"写法注册路由，结果 boot 干净无报错，但路由全部落到 SPA 回退（GET 返回 index.html、POST 405）——插件的 client roster 在，宿主路由全丢。
+- **根因**：cordis `ctx.get(name)` 默认 `strict=true`，只返回"providing fiber 处于 ACTIVE"的实现；插件 apply 的执行时机与目标服务的 fiber 生命周期**没有顺序保证**——apply 先跑时 get 返回 undefined，`if (webServer)` 分支被静默跳过。
+- **修复**：凡 apply 时**确定要用的**服务一律走**声明式 `inject`**（cordis 保证依赖就绪后才跑 apply）；真·可选功能才用 `ctx.get(name, false)` 并接受"拿不到就不注册"。若插件要在无该服务的 profile 里存活，拆成两条 row（如 `pkg` 与 `pkg/store`）而非 ctx.get 硬扛。
+- **验证**：`dsh --profile web --dump-config` + 实测路由（GET 目录路由应返回 JSON 而非 index.html；POST 安装路由应 400/404 而非 SPA 405）。

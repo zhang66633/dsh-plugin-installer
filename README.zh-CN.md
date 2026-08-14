@@ -29,7 +29,7 @@
 | dsh 生态 | `0.1.0-rc.6`（最后验证 2026-08） |
 | 系统 | Windows / macOS / Linux |
 | Node | ≥ 22.19 |
-| 界面 | Web GUI（`dsh --profile web`）；无 GUI 的 profile 仅提供安装技能 |
+| 界面 | Web GUI（`dsh --profile web`）；无 GUI 的 profile 请走路线 B 仅安装技能 |
 
 ## Install / Uninstall
 

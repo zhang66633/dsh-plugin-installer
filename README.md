@@ -29,7 +29,7 @@
 | dsh ecosystem | `0.1.0-rc.6` (last verified 2026-08) |
 | OS | Windows / macOS / Linux |
 | Node | ≥ 22.19 |
-| Surface | Web GUI (`dsh --profile web`); non-GUI profiles get the install skill only |
+| Surface | Web GUI (`dsh --profile web`); non-GUI profiles should use Route B (skill only) |
 
 ## Install / Uninstall
 
