@@ -150,3 +150,21 @@
   - ⚠️ 在 pnpm 9.15 往 `.npmrc` 加 `autoInstallPeers=false` **不完全生效**（`pnpm config get` 返回 false，但 hoisted 模式下 peer 仍被实体装）。
 - **验证**：profile 目录里 `node -e "console.log(require.resolve('@deepseek-ai/dsh-scope/package.json'))"` 应指向 **CLI 安装目录**（`.../AppData/Roaming/npm/node_modules/@deepseek-ai/dsh/node_modules/@deepseek-ai/dsh-scope`），且 `node_modules/@deepseek-ai/dsh-scope` **不应存在**。
 - **注意**：之前误判为"cc-tui 写法/rc.6 版本错配"并禁 agent-presets 是**错误方向**——真根因是 pnpm 9 peer 实体化。run_code 调度器缺失是禁 preset 的次生症状，preset 正常 mount 后随组合注册，无需单独处理。上游 issue：ccch1mneyyy/dsh-TUI#26。
+
+## 16. pnpm 跨盘 link: junction 损坏（C: node_modules → D: 插件源码）
+
+- **症状**：`link:D:/...` 注册的本地插件，装了别的包或重跑 `pnpm install` 后，`<profile>/node_modules/<pkg>` 的 junction 目标变成 `C:\Users\<u>\.dsh\profiles\<p>\D:\...` 这种带双盘符的非法路径 → 插件解析失败、dump-config 里消失。
+- **根因**：pnpm 在 Windows 上对**跨盘** link: 目标生成 relative junction 时拼出"带盘符的伪相对路径"（node_modules 在 C:、插件在 D: 时必现；同盘正常）。
+- **修复**：先删坏 junction 再手动重建（`mklink` 前必须删，否则 "file already exists" 静默失败）：
+  ```powershell
+  cmd /c rmdir "C:\Users\<u>\.dsh\profiles\<p>\node_modules\<pkg>"
+  cmd /c mklink /J "C:\Users\<u>\.dsh\profiles\<p>\node_modules\<pkg>" "D:\真实路径"
+  ```
+- **验证**：`Test-Path "<profile>\node_modules\<pkg>\package.json"` 为 True。⚠️ 每次 `pnpm install` 后都可能复发，装完包必复查所有 link: junction。
+
+## 17. `dsh plugin add` 丢非安装自有 bundle
+
+- **症状**：`dsh plugin --profile web add <npm包>` 成功后，之前 link: 注册的本地插件从 dump-config 里消失；查 profile `package.json`：`dependencies` 里 `link:` 还在，但 `dsh.profile.bundles` 里没了它。
+- **根因**：`dsh plugin add` 重写 bundles 列表时只保留安装自有的 bundle，把出树的 link: 插件丢出列表（dependencies 不动，只动 bundles）。
+- **修复**：add 后手动把丢掉的 bundle 名加回 `dsh.profile.bundles`（放 web-app 之后、按需排序）。
+- **验证**：`dsh --profile web --dump-config` 里新旧插件都在。
