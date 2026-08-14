@@ -1,6 +1,6 @@
 # dsh-plugin-installer
 
-> DeepSeek Harness（ `dsh` ）的**插件商店 + 安装助手**：在 Web GUI 里逛插件目录，一键确认安装，agent 替你装好。
+> DeepSeek Harness（dsh）的**插件商店 + 安装助手**：在 Web GUI 里逛插件目录，一键确认安装，agent 替你装好。
 
 ![License: MIT](https://img.shields.io/badge/license-MIT-blue)
 ![npm](https://img.shields.io/npm/v/dsh-plugin-installer)
