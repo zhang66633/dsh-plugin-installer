@@ -4,6 +4,7 @@
 
 ![License: MIT](https://img.shields.io/badge/license-MIT-blue)
 ![npm](https://img.shields.io/npm/v/dsh-plugin-installer)
+![CI](https://github.com/zhang66633/dsh-plugin-installer/actions/workflows/ci.yml/badge.svg)
 ![dsh](https://img.shields.io/badge/dsh-0.1.0--rc.6-green)
 ![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux-lightgrey)
 ![Docs](https://img.shields.io/badge/docs-简体中文%20%7C%20English-informational)
