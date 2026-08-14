@@ -34,14 +34,14 @@ echo
 echo "===== 2. 共享依赖层（_plugins/node_modules）====="
 NMOD="${PLUGINS_DIR}/node_modules"
 if [ -d "$NMOD" ]; then
-  echo "  node_modules 存在（包数: $(ls "$NMOD" 2>/dev/null | wc -l)）"
+  echo "  node_modules 存在（包数: $(find "$NMOD" -mindepth 1 -maxdepth 1 2>/dev/null | wc -l)）"
 else
   echo "  ✗ _plugins/node_modules 不存在——先跑: cd $PLUGINS_DIR && npm install"
 fi
 
 echo
 echo "===== 3. profile 组合树 ====="
-cd "$PROFILE_DIR" 2>/dev/null || cd ~
+cd "$PROFILE_DIR" 2>/dev/null || cd ~ || exit 1
 DUMP_OUT=$(dsh --profile "$PROFILE" --dump-config 2>&1)
 echo "$DUMP_OUT" | grep -q "patch.*not found" && echo "  ⚠️ patch 警告（多为无害的 disabled 目标缺失）:" && echo "$DUMP_OUT" | grep "patch.*not found" | head -3 || echo "  无 patch 警告"
 if echo "$DUMP_OUT" | grep -qiE "^# == .*${PLUGIN}|^- id: .*${PLUGIN}"; then

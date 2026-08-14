@@ -32,8 +32,11 @@ else
 fi
 
 echo "[3/3] npm install（首次约 1-2 分钟）..."
-cd "${PLUGINS_DIR}" && npm install --no-audit --no-fund
-if [ $? -eq 0 ]; then
+if ! cd "${PLUGINS_DIR}"; then
+  echo "❌ 无法进入 ${PLUGINS_DIR}"
+  exit 1
+fi
+if npm install --no-audit --no-fund; then
   echo
   echo "✅ bootstrap 完成。_plugins/node_modules 已就绪。"
   echo
