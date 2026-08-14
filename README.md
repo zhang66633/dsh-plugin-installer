@@ -1,6 +1,6 @@
 # dsh-plugin-installer
 
-> A **plugin store + install assistant** for DeepSeek Harness (`dsh`): browse the plugin catalog in the Web GUI, confirm an install with one click, and let the agent finish it for you.
+> A **plugin store + install assistant** for DeepSeek Harness (dsh): browse the plugin catalog in the Web GUI, confirm an install with one click, and let the agent finish it for you.
 
 ![License: MIT](https://img.shields.io/badge/license-MIT-blue)
 ![npm](https://img.shields.io/npm/v/dsh-plugin-installer)
