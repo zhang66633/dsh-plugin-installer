@@ -56,6 +56,7 @@ function StoreView({ requestInstall }) {
   const [catalog, setCatalog] = useState(null)
   const [query, setQuery] = useState('')
   const [requested, setRequested] = useState({})
+  const [updated, setUpdated] = useState({})
   const [confirming, setConfirming] = useState({})
 
   useEffect(() => {
@@ -95,36 +96,69 @@ function StoreView({ requestInstall }) {
             h('div', { style: S.cardBody },
               h('a', { style: S.cardName, href: p.url, target: '_blank', rel: 'noreferrer', title: p.url }, p.name),
               descOf(p) ? h('p', { style: S.cardDesc, title: descOf(p) }, descOf(p)) : null,
+              p.installed && p.installed_version
+                ? h('p', { style: S.cardDesc },
+                    `已装 v${p.installed_version}`,
+                    p.update_available ? ` · 最新 v${p.latest_version}` : '')
+                : null,
             ),
             p.category ? h('span', { style: S.chip }, p.category) : null,
             p.source === 'discovered' ? h('span', { style: S.chipAuto, title: '自动发现：仅通过清单检查（package.json/入口），未经运行验证' }, '自动发现') : null,
             p.stars > 0 ? h('span', { style: S.stars }, `★ ${p.stars}`) : null,
-            p.installed
+            p.update_available
+              ? h('span', { style: S.chipAuto, title: `可更新到 v${p.latest_version}` }, '可更新')
+              : null,
+            p.installed && !p.update_available
               ? h('span', { style: { ...S.btn, ...S.btnDone }, title: '已安装，重启 dsh web 后生效' }, '已安装')
-              : done
-                ? h('span', { style: { ...S.btn, ...S.btnDone } }, '已请求安装')
-                : confirmingNow
-                ? h('span', { style: S.confirmWrap },
-                    h('span', { style: S.confirmText }, '将修改 web profile 并执行安装命令，确认安装？'),
-                    h('span', { style: { display: 'flex', gap: '8px' } },
-                      h('button', {
-                        style: S.btn,
-                        onClick: () => {
-                          setConfirming((m) => ({ ...m, [p.name]: false }))
-                          setRequested((m) => ({ ...m, [p.name]: true }))
-                          if (requestInstall) requestInstall(p.name)
-                        },
-                      }, '确认安装'),
-                      h('button', {
-                        style: S.btnCancel,
-                        onClick: () => setConfirming((m) => ({ ...m, [p.name]: false })),
-                      }, '取消'),
-                    ),
-                  )
-                : h('button', {
-                    style: S.btn,
-                    onClick: () => setConfirming((m) => ({ ...m, [p.name]: true })),
-                  }, '安装'),
+              : p.update_available
+                ? (updated[p.name]
+                    ? h('span', { style: { ...S.btn, ...S.btnDone } }, '已请求更新')
+                    : confirmingNow
+                      ? h('span', { style: S.confirmWrap },
+                          h('span', { style: S.confirmText }, `将更新到 v${p.latest_version} 并执行安装命令，确认更新？`),
+                          h('span', { style: { display: 'flex', gap: '8px' } },
+                            h('button', {
+                              style: S.btn,
+                              onClick: () => {
+                                setConfirming((m) => ({ ...m, [p.name]: false }))
+                                setUpdated((m) => ({ ...m, [p.name]: true }))
+                                if (requestInstall) requestInstall(p.name, p.latest_version)
+                              },
+                            }, '确认更新'),
+                            h('button', {
+                              style: S.btnCancel,
+                              onClick: () => setConfirming((m) => ({ ...m, [p.name]: false })),
+                            }, '取消'),
+                          ),
+                        )
+                      : h('button', {
+                          style: S.btn,
+                          onClick: () => setConfirming((m) => ({ ...m, [p.name]: true })),
+                        }, '更新'))
+                : done
+                  ? h('span', { style: { ...S.btn, ...S.btnDone } }, '已请求安装')
+                  : confirmingNow
+                  ? h('span', { style: S.confirmWrap },
+                      h('span', { style: S.confirmText }, '将修改 web profile 并执行安装命令，确认安装？'),
+                      h('span', { style: { display: 'flex', gap: '8px' } },
+                        h('button', {
+                          style: S.btn,
+                          onClick: () => {
+                            setConfirming((m) => ({ ...m, [p.name]: false }))
+                            setRequested((m) => ({ ...m, [p.name]: true }))
+                            if (requestInstall) requestInstall(p.name, '')
+                          },
+                        }, '确认安装'),
+                        h('button', {
+                          style: S.btnCancel,
+                          onClick: () => setConfirming((m) => ({ ...m, [p.name]: false })),
+                        }, '取消'),
+                      ),
+                    )
+                  : h('button', {
+                      style: S.btn,
+                      onClick: () => setConfirming((m) => ({ ...m, [p.name]: true })),
+                    }, '安装'),
           )
         }),
     ),
@@ -143,12 +177,12 @@ export function apply(ctx) {
     order: 20,
     label: () => '插件商店',
     inject: (sessionId) => ({
-      requestInstall: async (pluginName) => {
+      requestInstall: async (pluginName, version = '') => {
         try {
           const res = await fetch('/plugin-store/install', {
             method: 'POST',
             headers: { 'content-type': 'application/json' },
-            body: JSON.stringify({ sessionId, plugin: pluginName }),
+            body: JSON.stringify({ sessionId, plugin: pluginName, version }),
           })
           return await res.json()
         } catch (error) {

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-14T12:22:14+00:00",
+  "generated_at": "2026-08-14T12:54:34+00:00",
   "pipeline_commit": "d944652",
   "total": 319,
   "plugins": [
@@ -18,6 +18,7 @@
       ],
       "updated_at": "2026-08-14T11:01:38Z",
       "is_plugin": true,
+      "latest_version": "",
       "source": "catalog"
     },
     {
@@ -51,6 +52,7 @@
       ],
       "updated_at": "2026-08-14T11:02:09Z",
       "is_plugin": true,
+      "latest_version": "3.16.1",
       "source": "catalog"
     },
     {
@@ -73,6 +75,7 @@
       ],
       "updated_at": "2026-08-14T10:53:41Z",
       "is_plugin": true,
+      "latest_version": "0.4.1",
       "source": "catalog"
     },
     {
@@ -89,6 +92,7 @@
       ],
       "updated_at": "2026-08-14T11:02:29Z",
       "is_plugin": true,
+      "latest_version": "",
       "source": "catalog"
     },
     {
@@ -108,6 +112,7 @@
       "updated_at": "2026-08-14T11:02:17Z",
       "is_plugin": true,
       "package": "dsh-better-sidebar",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -125,6 +130,7 @@
       "updated_at": "2026-08-14T10:02:56Z",
       "is_plugin": true,
       "package": "managed-agents",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -153,6 +159,7 @@
       "updated_at": "2026-08-14T10:50:06Z",
       "is_plugin": true,
       "package": "abu",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -184,6 +191,7 @@
       "updated_at": "2026-08-14T10:26:12Z",
       "is_plugin": true,
       "package": "@anionex/dsh-vision-toolkit",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -202,6 +210,7 @@
       "updated_at": "2026-08-14T10:48:42Z",
       "is_plugin": true,
       "package": "@dsh-external/dsh-ads",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -221,6 +230,7 @@
       "updated_at": "2026-08-14T10:56:30Z",
       "is_plugin": true,
       "package": "@nanmicoder/dsh-agent-teams",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -239,6 +249,7 @@
       "updated_at": "2026-08-14T10:54:47Z",
       "is_plugin": true,
       "package": "@oh-dsh/desktop",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -256,6 +267,7 @@
       ],
       "updated_at": "2026-08-14T11:02:37Z",
       "is_plugin": true,
+      "latest_version": "0.1.1",
       "source": "catalog"
     },
     {
@@ -275,6 +287,7 @@
       "updated_at": "2026-08-14T10:55:38Z",
       "is_plugin": true,
       "package": "whale-girl",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -293,6 +306,7 @@
       "updated_at": "2026-08-14T10:30:14Z",
       "is_plugin": true,
       "package": "@huiliyi37/dsh-tianshu-tui",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -309,6 +323,7 @@
       "updated_at": "2026-08-14T10:34:15Z",
       "is_plugin": true,
       "package": "dsh-at-file",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -342,6 +357,7 @@
       "updated_at": "2026-08-14T10:34:27Z",
       "is_plugin": true,
       "package": "@liustack/modsearch",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -360,6 +376,7 @@
       "updated_at": "2026-08-14T10:34:48Z",
       "is_plugin": true,
       "package": "@dsh-external/dsh-visualize",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -376,6 +393,7 @@
       "updated_at": "2026-08-14T10:29:00Z",
       "is_plugin": true,
       "package": "@omdsh-dev/dsh-genui",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -394,6 +412,7 @@
       "updated_at": "2026-08-14T10:34:41Z",
       "is_plugin": true,
       "package": "@zseven-w/dsh-openpencil",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -415,6 +434,7 @@
       "updated_at": "2026-08-14T09:59:39Z",
       "is_plugin": true,
       "package": "@dsh-external/workflow",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -438,6 +458,7 @@
       "updated_at": "2026-08-14T09:59:46Z",
       "is_plugin": true,
       "package": "morning-star",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -454,6 +475,7 @@
       "updated_at": "2026-08-14T09:59:44Z",
       "is_plugin": true,
       "package": "dsh-open-in-vscode",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -471,6 +493,7 @@
       "updated_at": "2026-08-14T10:50:37Z",
       "is_plugin": true,
       "package": "deepseek-harness-desktop",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -487,6 +510,7 @@
       "updated_at": "2026-08-14T09:59:43Z",
       "is_plugin": true,
       "package": "dsh-notification",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -510,6 +534,7 @@
       "updated_at": "2026-08-14T09:59:36Z",
       "is_plugin": true,
       "package": "@dsh-external/turn-rewind",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -526,6 +551,7 @@
       ],
       "updated_at": "2026-08-14T10:19:22Z",
       "is_plugin": true,
+      "latest_version": "0.1.0",
       "source": "catalog"
     },
     {
@@ -542,6 +568,7 @@
       "updated_at": "2026-08-14T10:54:43Z",
       "is_plugin": true,
       "package": "@omdsh-dev/dsh-annotation",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -562,6 +589,7 @@
       ],
       "updated_at": "2026-08-14T08:38:11Z",
       "is_plugin": true,
+      "latest_version": "",
       "source": "catalog"
     },
     {
@@ -578,6 +606,7 @@
       "updated_at": "2026-08-14T09:45:26Z",
       "is_plugin": true,
       "package": "@multica-ai/dsh-runtime",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -600,6 +629,7 @@
       "updated_at": "2026-08-14T10:52:38Z",
       "is_plugin": true,
       "package": "@dsh-external/dsh-automation",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -615,6 +645,7 @@
       ],
       "updated_at": "2026-08-14T10:52:51Z",
       "is_plugin": true,
+      "latest_version": "0.3.3",
       "source": "catalog"
     },
     {
@@ -633,6 +664,7 @@
       "updated_at": "2026-08-14T08:12:07Z",
       "is_plugin": true,
       "package": "dsh-interconnect",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -649,6 +681,7 @@
       "updated_at": "2026-08-14T09:59:42Z",
       "is_plugin": true,
       "package": "dsh-custom-tool",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -678,6 +711,7 @@
       "updated_at": "2026-08-14T10:51:28Z",
       "is_plugin": true,
       "package": "dsh-desktop",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -704,6 +738,7 @@
       "updated_at": "2026-08-14T10:50:03Z",
       "is_plugin": true,
       "package": "dsh-plugin-marketplace",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -723,6 +758,7 @@
       "updated_at": "2026-08-14T11:01:42Z",
       "is_plugin": true,
       "package": "dsh-vision-router",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -743,6 +779,7 @@
       "updated_at": "2026-08-14T10:58:58Z",
       "is_plugin": true,
       "package": "deepseek-harness-desktop",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -762,6 +799,7 @@
       "updated_at": "2026-08-14T09:20:08Z",
       "is_plugin": true,
       "package": "@openbiliclaw/dsh-plugin",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -784,6 +822,7 @@
       "updated_at": "2026-08-14T10:54:46Z",
       "is_plugin": true,
       "package": "dskin",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -798,6 +837,7 @@
       ],
       "updated_at": "2026-08-14T10:45:25Z",
       "is_plugin": true,
+      "latest_version": "0.2.0",
       "source": "catalog"
     },
     {
@@ -832,6 +872,7 @@
       "updated_at": "2026-08-14T10:47:46Z",
       "is_plugin": true,
       "package": "dsh-chat-import",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -849,6 +890,7 @@
       ],
       "updated_at": "2026-08-14T10:07:58Z",
       "is_plugin": true,
+      "latest_version": "0.1.5",
       "source": "catalog"
     },
     {
@@ -865,6 +907,7 @@
       "updated_at": "2026-08-14T10:13:28Z",
       "is_plugin": true,
       "package": "@dsh-external/dsh-side-panel",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -886,6 +929,7 @@
       "updated_at": "2026-08-14T10:48:49Z",
       "is_plugin": true,
       "package": "deepseek-harness-desktop",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -901,6 +945,7 @@
       "updated_at": "2026-08-14T10:32:56Z",
       "is_plugin": true,
       "package": "dsh-plugin-template",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -918,6 +963,7 @@
       "updated_at": "2026-08-14T09:18:12Z",
       "is_plugin": true,
       "package": "dsh-desktop",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -934,6 +980,7 @@
       "updated_at": "2026-08-14T08:17:09Z",
       "is_plugin": true,
       "package": "dsh-message-edit",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -949,6 +996,7 @@
       ],
       "updated_at": "2026-08-14T10:41:34Z",
       "is_plugin": true,
+      "latest_version": "0.1.0",
       "source": "catalog"
     },
     {
@@ -978,6 +1026,7 @@
       "updated_at": "2026-08-14T06:20:25Z",
       "is_plugin": true,
       "package": "@dsh-external/dsh-computer-use",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -995,6 +1044,7 @@
       "updated_at": "2026-08-14T10:58:23Z",
       "is_plugin": true,
       "package": "dsh-context",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -1011,6 +1061,7 @@
       "updated_at": "2026-08-14T09:24:43Z",
       "is_plugin": true,
       "package": "@dsh-external/dsh-share",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -1025,6 +1076,7 @@
       ],
       "updated_at": "2026-08-14T08:35:45Z",
       "is_plugin": "unknown",
+      "latest_version": "0.1.0",
       "source": "catalog"
     },
     {
@@ -1043,6 +1095,7 @@
       "updated_at": "2026-08-14T10:54:36Z",
       "is_plugin": true,
       "package": "@yejiming/dsh-data-agent",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -1066,6 +1119,7 @@
       "updated_at": "2026-08-14T10:52:04Z",
       "is_plugin": true,
       "package": "dsh-lark-channel",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -1085,6 +1139,7 @@
       "updated_at": "2026-08-14T07:53:54Z",
       "is_plugin": true,
       "package": "@deepseek-ai/dsh-plugin-check",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -1104,6 +1159,7 @@
       "updated_at": "2026-08-14T07:39:18Z",
       "is_plugin": true,
       "package": "@deepseek-ai/dsh-toolkit",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -1117,6 +1173,7 @@
       "updated_at": "2026-08-14T07:23:49Z",
       "is_plugin": true,
       "package": "@dsh-external/dsh-vision",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -1135,6 +1192,7 @@
       "updated_at": "2026-08-14T11:01:03Z",
       "is_plugin": true,
       "package": "dsh-user-experience",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -1153,6 +1211,7 @@
       "updated_at": "2026-08-14T09:59:15Z",
       "is_plugin": true,
       "package": "@dsh-external/dsh-navbar",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -1169,6 +1228,7 @@
       "updated_at": "2026-08-14T10:02:27Z",
       "is_plugin": true,
       "package": "@dingyi222666/dsh-focus-chat",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -1192,6 +1252,7 @@
       "updated_at": "2026-08-14T08:50:43Z",
       "is_plugin": true,
       "package": "@dsh-tui/dsh-tui",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -1214,6 +1275,7 @@
       "updated_at": "2026-08-14T09:18:07Z",
       "is_plugin": true,
       "package": "dsh-balance-meter",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -1230,6 +1292,7 @@
       "updated_at": "2026-08-14T07:08:21Z",
       "is_plugin": true,
       "package": "@dsh-external/dsh-minigames",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -1252,6 +1315,7 @@
       "updated_at": "2026-08-14T10:47:02Z",
       "is_plugin": true,
       "package": "dsh-usage-stats",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -1275,6 +1339,7 @@
       "updated_at": "2026-08-14T09:38:58Z",
       "is_plugin": true,
       "package": "dsh-hud",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -1294,6 +1359,7 @@
       "updated_at": "2026-08-14T10:52:16Z",
       "is_plugin": true,
       "package": "@dsh-external/ego-browser",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -1313,6 +1379,7 @@
       "updated_at": "2026-08-14T10:55:06Z",
       "is_plugin": true,
       "package": "dsh-skill-viewer",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -1331,6 +1398,7 @@
       "updated_at": "2026-08-14T10:45:49Z",
       "is_plugin": true,
       "package": "superpowers-dsh",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -1347,6 +1415,7 @@
       "updated_at": "2026-08-14T09:51:14Z",
       "is_plugin": true,
       "package": "@dsh-scholar/research-plugin",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -1360,6 +1429,7 @@
       "updated_at": "2026-08-14T10:45:40Z",
       "is_plugin": true,
       "package": "awesome-deepseek-harness-desktop",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -1377,6 +1447,7 @@
       "updated_at": "2026-08-14T09:05:40Z",
       "is_plugin": true,
       "package": "@deepseek-ai/dsh-gomoku",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -1396,6 +1467,7 @@
       "updated_at": "2026-08-14T10:52:05Z",
       "is_plugin": true,
       "package": "@deepseek-ai/dsh-security-audit",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -1411,6 +1483,7 @@
       "updated_at": "2026-08-14T06:17:18Z",
       "is_plugin": true,
       "package": "dsh-stock-market",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -1428,6 +1501,7 @@
       "updated_at": "2026-08-14T09:57:57Z",
       "is_plugin": true,
       "package": "dsh-find-plugin",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -1445,6 +1519,7 @@
       "updated_at": "2026-08-13T16:39:00Z",
       "is_plugin": true,
       "package": "dsh-acp-for-bitfun",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -1465,6 +1540,7 @@
       ],
       "updated_at": "2026-08-14T10:00:55Z",
       "is_plugin": true,
+      "latest_version": "0.1.0",
       "source": "catalog"
     },
     {
@@ -1494,6 +1570,7 @@
       "updated_at": "2026-08-14T10:55:30Z",
       "is_plugin": true,
       "package": "deepseek-plugin-store",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -1511,6 +1588,7 @@
       "updated_at": "2026-08-14T10:54:54Z",
       "is_plugin": true,
       "package": "dsh-emoji",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -1533,6 +1611,7 @@
       "updated_at": "2026-08-14T10:03:53Z",
       "is_plugin": true,
       "package": "dsh-client-auto-continue",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -1558,6 +1637,7 @@
       "updated_at": "2026-08-14T10:52:08Z",
       "is_plugin": true,
       "package": "dsh-file-explorer",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -1589,6 +1669,7 @@
       "updated_at": "2026-08-14T10:52:03Z",
       "is_plugin": true,
       "package": "dsh-mnemon",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -1608,6 +1689,7 @@
       "updated_at": "2026-08-14T10:52:05Z",
       "is_plugin": true,
       "package": "@deepseek-ai/dsh-session-health",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -1624,6 +1706,7 @@
       "updated_at": "2026-08-14T10:52:07Z",
       "is_plugin": true,
       "package": "cordis-fabric-bundle",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -1642,6 +1725,7 @@
       "updated_at": "2026-08-14T09:59:08Z",
       "is_plugin": true,
       "package": "@linxin666/freestyle-dsh-theme",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -1663,6 +1747,7 @@
       "updated_at": "2026-08-14T10:52:20Z",
       "is_plugin": true,
       "package": "dsh-surfing-plugin",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -1679,6 +1764,7 @@
       "updated_at": "2026-08-14T11:01:51Z",
       "is_plugin": true,
       "package": "dsh-web-plugin-manager",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -1697,6 +1783,7 @@
       ],
       "updated_at": "2026-08-14T10:49:38Z",
       "is_plugin": true,
+      "latest_version": "0.1.0",
       "source": "catalog"
     },
     {
@@ -1712,6 +1799,7 @@
       "updated_at": "2026-08-14T10:57:38Z",
       "is_plugin": true,
       "package": "@dsh-external/dsh-deep-research",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -1727,6 +1815,7 @@
       "updated_at": "2026-08-14T10:40:50Z",
       "is_plugin": true,
       "package": "dsh-github",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -1746,6 +1835,7 @@
       "updated_at": "2026-08-14T10:36:28Z",
       "is_plugin": true,
       "package": "dsh-milestone",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -1762,6 +1852,7 @@
       "updated_at": "2026-08-14T09:14:33Z",
       "is_plugin": true,
       "package": "@dsh-external/dsh-stickers",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -1778,6 +1869,7 @@
       "updated_at": "2026-08-14T08:01:56Z",
       "is_plugin": true,
       "package": "@dsh-external/dsh-super-injector",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -1797,6 +1889,7 @@
       "updated_at": "2026-08-14T09:21:36Z",
       "is_plugin": true,
       "package": "dsh-recommend",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -1813,6 +1906,7 @@
       "updated_at": "2026-08-14T10:52:19Z",
       "is_plugin": true,
       "package": "@bill9109/dsh-web-ui-notify",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -1830,6 +1924,7 @@
       "updated_at": "2026-08-14T03:06:19Z",
       "is_plugin": true,
       "package": "dsh-grok-tui",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -1845,6 +1940,7 @@
       "updated_at": "2026-08-14T10:52:00Z",
       "is_plugin": true,
       "package": "dsh-plugin-background",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -1860,6 +1956,7 @@
       "updated_at": "2026-08-14T06:26:22Z",
       "is_plugin": true,
       "package": "@huanlin/dsh-plugin-mineru",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -1876,6 +1973,7 @@
       "updated_at": "2026-08-14T09:19:01Z",
       "is_plugin": true,
       "package": "powercontext-dsh",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -1895,6 +1993,7 @@
       "updated_at": "2026-08-14T09:59:01Z",
       "is_plugin": true,
       "package": "@dsh-external/dsh-qq2006",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -1911,6 +2010,7 @@
       "updated_at": "2026-08-14T06:00:48Z",
       "is_plugin": true,
       "package": "@dsh-community/dsh-paste-input",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -1926,6 +2026,7 @@
       ],
       "updated_at": "2026-08-14T02:52:26Z",
       "is_plugin": true,
+      "latest_version": "0.9.1",
       "source": "catalog"
     },
     {
@@ -1952,6 +2053,7 @@
       "updated_at": "2026-08-14T09:19:02Z",
       "is_plugin": true,
       "package": "@lhmd/dsh-director-toolkit",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -1984,6 +2086,7 @@
       "updated_at": "2026-08-14T09:19:03Z",
       "is_plugin": true,
       "package": "@lhmd/dsh-promotion-toolkit",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -1999,6 +2102,7 @@
       "updated_at": "2026-08-13T16:39:09Z",
       "is_plugin": true,
       "package": "@loserfox/git-identity",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -2018,6 +2122,7 @@
       ],
       "updated_at": "2026-08-14T10:49:06Z",
       "is_plugin": true,
+      "latest_version": "",
       "source": "catalog"
     },
     {
@@ -2043,6 +2148,7 @@
       "updated_at": "2026-08-14T10:59:40Z",
       "is_plugin": true,
       "package": "dsh-lark-bot",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -2064,6 +2170,7 @@
       "updated_at": "2026-08-14T10:44:18Z",
       "is_plugin": true,
       "package": "dsh-launcher",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -2083,6 +2190,7 @@
       "updated_at": "2026-08-14T09:19:23Z",
       "is_plugin": true,
       "package": "dsh-plugin-product-subagents",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -2101,6 +2209,7 @@
       "updated_at": "2026-08-14T06:19:36Z",
       "is_plugin": true,
       "package": "@dsh-external/dsh-task-status",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -2118,6 +2227,7 @@
       "updated_at": "2026-08-14T09:19:42Z",
       "is_plugin": true,
       "package": "@ramify/dsh-ramify",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -2136,6 +2246,7 @@
       "updated_at": "2026-08-14T10:52:46Z",
       "is_plugin": true,
       "package": "@dsh-external/dsh-plugin-workshop",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -2158,6 +2269,7 @@
       "updated_at": "2026-08-14T09:18:02Z",
       "is_plugin": true,
       "package": "dsh-playwright-browser",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -2175,6 +2287,7 @@
       "updated_at": "2026-08-14T10:51:03Z",
       "is_plugin": true,
       "package": "dshmarket",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -2194,6 +2307,7 @@
       "updated_at": "2026-08-14T08:41:26Z",
       "is_plugin": true,
       "package": "dsh-record-replay",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -2211,6 +2325,7 @@
       "updated_at": "2026-08-14T10:36:28Z",
       "is_plugin": true,
       "package": "deepseek-pet",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -2232,6 +2347,7 @@
       "updated_at": "2026-08-14T10:39:45Z",
       "is_plugin": true,
       "package": "dsh-skin",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -2254,6 +2370,7 @@
       "updated_at": "2026-08-14T09:18:16Z",
       "is_plugin": true,
       "package": "dsh-compaction-instant",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -2277,6 +2394,7 @@
       ],
       "updated_at": "2026-08-14T10:15:11Z",
       "is_plugin": true,
+      "latest_version": "0.1.0",
       "source": "catalog"
     },
     {
@@ -2291,6 +2409,7 @@
       ],
       "updated_at": "2026-08-13T16:39:31Z",
       "is_plugin": true,
+      "latest_version": "0.1.0",
       "source": "catalog"
     },
     {
@@ -2310,6 +2429,7 @@
       ],
       "updated_at": "2026-08-14T06:44:35Z",
       "is_plugin": true,
+      "latest_version": "",
       "source": "catalog"
     },
     {
@@ -2329,6 +2449,7 @@
       "updated_at": "2026-08-14T09:18:25Z",
       "is_plugin": true,
       "package": "dshx-terminal",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -2349,6 +2470,7 @@
       "updated_at": "2026-08-14T04:31:54Z",
       "is_plugin": true,
       "package": "@dsh-external/dsh-oauth-mcp-client",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -2367,6 +2489,7 @@
       "updated_at": "2026-08-14T11:02:13Z",
       "is_plugin": true,
       "package": "billion-context-dsh",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -2382,6 +2505,7 @@
       "updated_at": "2026-08-14T09:18:34Z",
       "is_plugin": true,
       "package": "dsh-codex",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -2402,6 +2526,7 @@
       "updated_at": "2026-08-14T02:58:36Z",
       "is_plugin": true,
       "package": "dsh-context-doctor",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -2419,6 +2544,7 @@
       "updated_at": "2026-08-14T10:18:20Z",
       "is_plugin": true,
       "package": "dsh-huadong-bianzuqi",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -2435,6 +2561,7 @@
       "updated_at": "2026-08-14T09:17:53Z",
       "is_plugin": true,
       "package": "dsh-status-rotator",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -2455,6 +2582,7 @@
       "updated_at": "2026-08-14T09:38:15Z",
       "is_plugin": true,
       "package": "dsh-git-graph",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -2474,6 +2602,7 @@
       "updated_at": "2026-08-14T09:17:59Z",
       "is_plugin": true,
       "package": "dsh-fail-logger",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -2499,6 +2628,7 @@
       "updated_at": "2026-08-14T10:24:35Z",
       "is_plugin": true,
       "package": "deepseek-harness-tui",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -2518,6 +2648,7 @@
       "updated_at": "2026-08-14T07:16:16Z",
       "is_plugin": true,
       "package": "@dsh-external/zotero-harvest",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -2539,6 +2670,7 @@
       "updated_at": "2026-08-14T02:40:47Z",
       "is_plugin": true,
       "package": "deepseek-harness-tui",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -2564,6 +2696,7 @@
       "updated_at": "2026-08-14T10:42:29Z",
       "is_plugin": true,
       "package": "dsh-cost-meter",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -2584,6 +2717,7 @@
       "updated_at": "2026-08-14T07:04:59Z",
       "is_plugin": true,
       "package": "dsh-mcp-manager",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -2601,6 +2735,7 @@
       "updated_at": "2026-08-14T09:18:58Z",
       "is_plugin": true,
       "package": "dsh-balance-monitor",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -2616,6 +2751,7 @@
       "updated_at": "2026-08-14T09:22:34Z",
       "is_plugin": true,
       "package": "@dsh-external/dsh-diff-viewer",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -2632,6 +2768,7 @@
       "updated_at": "2026-08-14T02:52:13Z",
       "is_plugin": true,
       "package": "@dsh-external/dsh-bash-encoding",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -2649,6 +2786,7 @@
       "updated_at": "2026-08-14T07:54:36Z",
       "is_plugin": true,
       "package": "dsh-lan",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -2667,6 +2805,7 @@
       "updated_at": "2026-08-14T10:52:03Z",
       "is_plugin": true,
       "package": "dsh-advisor",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -2683,6 +2822,7 @@
       "updated_at": "2026-08-14T07:24:43Z",
       "is_plugin": true,
       "package": "@your-scope/dsh-plugin-template",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -2698,6 +2838,7 @@
       "updated_at": "2026-08-14T08:37:48Z",
       "is_plugin": true,
       "package": "dsh-pet",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -2715,6 +2856,7 @@
       "updated_at": "2026-08-14T03:26:57Z",
       "is_plugin": true,
       "package": "@openmaic/dsh-openmaic",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -2731,6 +2873,7 @@
       "updated_at": "2026-08-14T08:10:57Z",
       "is_plugin": true,
       "package": "dsh-plugin-installer",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -2747,6 +2890,7 @@
       ],
       "updated_at": "2026-08-14T07:03:01Z",
       "is_plugin": "unknown",
+      "latest_version": "0.0.1",
       "source": "catalog"
     },
     {
@@ -2763,6 +2907,7 @@
       "updated_at": "2026-08-14T10:01:44Z",
       "is_plugin": true,
       "package": "@dsh-external/dsh-evolve",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -2780,6 +2925,7 @@
       "updated_at": "2026-08-14T09:19:40Z",
       "is_plugin": true,
       "package": "dsh-updater-ui",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -2797,6 +2943,7 @@
       "updated_at": "2026-08-14T10:52:08Z",
       "is_plugin": true,
       "package": "dsh-explain",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -2815,6 +2962,7 @@
       "updated_at": "2026-08-14T08:59:45Z",
       "is_plugin": true,
       "package": "dsh-plugin-claude-bridge",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -2836,6 +2984,7 @@
       "updated_at": "2026-08-14T09:17:58Z",
       "is_plugin": true,
       "package": "dsh-scholar",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -2852,6 +3001,7 @@
       "updated_at": "2026-08-14T09:18:41Z",
       "is_plugin": true,
       "package": "dsh-science",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -2872,6 +3022,7 @@
       "updated_at": "2026-08-14T09:18:00Z",
       "is_plugin": true,
       "package": "dsh-annotate",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -2898,6 +3049,7 @@
       "updated_at": "2026-08-14T04:35:18Z",
       "is_plugin": true,
       "package": "dsh-telegram-relay",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -2913,6 +3065,7 @@
       "updated_at": "2026-08-14T09:18:46Z",
       "is_plugin": true,
       "package": "@deepseek-ai/dsh-peer-link",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -2934,6 +3087,7 @@
       "updated_at": "2026-08-13T16:41:33Z",
       "is_plugin": true,
       "package": "dsh-openapi",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -2947,6 +3101,7 @@
       "updated_at": "2026-08-14T02:20:10Z",
       "is_plugin": true,
       "package": "dsh-switch",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -2971,6 +3126,7 @@
       "updated_at": "2026-08-14T03:55:05Z",
       "is_plugin": true,
       "package": "dsh-tool-turbo",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -2992,6 +3148,7 @@
       "updated_at": "2026-08-14T10:52:15Z",
       "is_plugin": true,
       "package": "@fakechris/dsh-track",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -3013,6 +3170,7 @@
       "updated_at": "2026-08-14T06:13:48Z",
       "is_plugin": true,
       "package": "dsh-plugin-deepeye",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -3033,6 +3191,7 @@
       "updated_at": "2026-08-14T03:55:36Z",
       "is_plugin": true,
       "package": "dsh-worktree",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -3045,6 +3204,7 @@
       "topics": [],
       "updated_at": "2026-08-14T07:02:03Z",
       "is_plugin": true,
+      "latest_version": "0.1.0-rc.6.11",
       "source": "catalog"
     },
     {
@@ -3061,6 +3221,7 @@
       "updated_at": "2026-08-14T09:43:12Z",
       "is_plugin": true,
       "package": "@dsh-external/dsh-sentinel",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -3079,6 +3240,7 @@
       "updated_at": "2026-08-14T09:18:08Z",
       "is_plugin": true,
       "package": "dsh-token-stats",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -3103,6 +3265,7 @@
       "updated_at": "2026-08-13T16:41:41Z",
       "is_plugin": true,
       "package": "dsh-agent-messaging",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -3118,6 +3281,7 @@
       "updated_at": "2026-08-14T06:43:18Z",
       "is_plugin": true,
       "package": "@huanlin/dsh-plugin-d399",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -3133,6 +3297,7 @@
       "updated_at": "2026-08-14T06:27:10Z",
       "is_plugin": true,
       "package": "@huanlin/dsh-plugin-yet-another-subagent",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -3149,6 +3314,7 @@
       "updated_at": "2026-08-14T09:18:56Z",
       "is_plugin": true,
       "package": "dsh-her-eyes",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -3164,6 +3330,7 @@
       "updated_at": "2026-08-14T10:23:48Z",
       "is_plugin": true,
       "package": "@dsh-external/dsh-mobile",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -3180,6 +3347,7 @@
       "updated_at": "2026-08-14T02:52:08Z",
       "is_plugin": true,
       "package": "@dsh-external/dsh-input-history",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -3195,6 +3363,7 @@
       ],
       "updated_at": "2026-08-14T04:11:36Z",
       "is_plugin": true,
+      "latest_version": "0.2.0",
       "source": "catalog"
     },
     {
@@ -3211,6 +3380,7 @@
       "updated_at": "2026-08-14T09:18:26Z",
       "is_plugin": true,
       "package": "dsh-sticky-note",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -3227,6 +3397,7 @@
       "updated_at": "2026-08-14T06:32:45Z",
       "is_plugin": true,
       "package": "deepseek-manners",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -3242,6 +3413,7 @@
       "updated_at": "2026-08-14T09:10:30Z",
       "is_plugin": true,
       "package": "dsh-win-notify",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -3263,6 +3435,7 @@
       "updated_at": "2026-08-14T04:56:15Z",
       "is_plugin": true,
       "package": "nowledge-mem-deepseek-harness",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -3282,6 +3455,7 @@
       "updated_at": "2026-08-14T10:49:44Z",
       "is_plugin": true,
       "package": "dsh-theme",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -3302,6 +3476,7 @@
       "updated_at": "2026-08-14T10:52:06Z",
       "is_plugin": true,
       "package": "@dsh-external/dsh-sidechain",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -3320,6 +3495,7 @@
       ],
       "updated_at": "2026-08-14T05:28:38Z",
       "is_plugin": true,
+      "latest_version": "0.0.1",
       "source": "catalog"
     },
     {
@@ -3339,6 +3515,7 @@
       "updated_at": "2026-08-14T06:14:57Z",
       "is_plugin": true,
       "package": "@openma/deepseek-harness-acp",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -3356,6 +3533,7 @@
       "updated_at": "2026-08-14T07:08:36Z",
       "is_plugin": true,
       "package": "dsh-web-archive",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -3376,6 +3554,7 @@
       "updated_at": "2026-08-14T09:23:55Z",
       "is_plugin": true,
       "package": "deepseek-harness-qqbot",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -3397,6 +3576,7 @@
       "updated_at": "2026-08-14T09:59:06Z",
       "is_plugin": true,
       "package": "deepseek-harness-wecom",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -3422,6 +3602,7 @@
       "updated_at": "2026-08-14T09:19:31Z",
       "is_plugin": true,
       "package": "@tensorlake/dsh-sandbox",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -3438,6 +3619,7 @@
       "updated_at": "2026-08-14T10:56:28Z",
       "is_plugin": true,
       "package": "dsh-composer-polish",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -3460,6 +3642,7 @@
       "updated_at": "2026-08-14T10:28:55Z",
       "is_plugin": true,
       "package": "@dsh-external/dsh-better-browser",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -3475,6 +3658,7 @@
       "updated_at": "2026-08-14T08:02:07Z",
       "is_plugin": true,
       "package": "dsh-desktop-electron",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -3498,6 +3682,7 @@
       "updated_at": "2026-08-14T09:20:15Z",
       "is_plugin": true,
       "package": "pi2dsh",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -3516,6 +3701,7 @@
       "updated_at": "2026-08-14T10:31:01Z",
       "is_plugin": true,
       "package": "dsh-vsc",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -3531,6 +3717,7 @@
       ],
       "updated_at": "2026-08-14T08:35:02Z",
       "is_plugin": true,
+      "latest_version": "",
       "source": "catalog"
     },
     {
@@ -3552,6 +3739,7 @@
       "updated_at": "2026-08-14T06:50:54Z",
       "is_plugin": true,
       "package": "dsh-qq-bridge",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -3564,6 +3752,7 @@
       "topics": [],
       "updated_at": "2026-08-14T10:58:57Z",
       "is_plugin": true,
+      "latest_version": "",
       "source": "catalog"
     },
     {
@@ -3577,6 +3766,7 @@
       "updated_at": "2026-08-14T09:19:47Z",
       "is_plugin": true,
       "package": "dsh-launcher",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -3592,6 +3782,7 @@
       "updated_at": "2026-08-14T09:19:48Z",
       "is_plugin": true,
       "package": "dsh-orchestrator",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -3607,6 +3798,7 @@
       "updated_at": "2026-08-14T10:43:28Z",
       "is_plugin": true,
       "package": "@0xsline/dsh-spotlight",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -3628,6 +3820,7 @@
       "updated_at": "2026-08-14T08:44:23Z",
       "is_plugin": true,
       "package": "dsh-hdc-bridge",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -3647,6 +3840,7 @@
       "updated_at": "2026-08-14T08:07:53Z",
       "is_plugin": true,
       "package": "dsh-web-search-pro",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -3664,6 +3858,7 @@
       "updated_at": "2026-08-14T10:52:20Z",
       "is_plugin": true,
       "package": "@auranlu/dsh-client-ui-monitor",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -3680,6 +3875,7 @@
       "updated_at": "2026-08-14T08:04:25Z",
       "is_plugin": true,
       "package": "@bill9109/dsh-webbridge",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -3695,6 +3891,7 @@
       "updated_at": "2026-08-14T03:24:26Z",
       "is_plugin": true,
       "package": "dsh-learn-everything",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -3712,6 +3909,7 @@
       "updated_at": "2026-08-13T18:44:17Z",
       "is_plugin": true,
       "package": "@chen-001/dsh-chat-width",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -3725,6 +3923,7 @@
       "updated_at": "2026-08-14T09:52:59Z",
       "is_plugin": true,
       "package": "dsh-tool-todo-tree",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -3740,6 +3939,7 @@
       "updated_at": "2026-08-14T06:14:51Z",
       "is_plugin": true,
       "package": "@detpecca/dsh-llm-wiki",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -3755,6 +3955,7 @@
       "updated_at": "2026-08-14T08:39:44Z",
       "is_plugin": true,
       "package": "@dingyi222666/dsh-session-notification",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -3770,6 +3971,7 @@
       "updated_at": "2026-08-14T10:06:08Z",
       "is_plugin": true,
       "package": "dsh4vscode",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -3797,6 +3999,7 @@
       "updated_at": "2026-08-14T06:58:57Z",
       "is_plugin": true,
       "package": "task-passport",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -3816,6 +4019,7 @@
       "updated_at": "2026-08-14T10:55:18Z",
       "is_plugin": true,
       "package": "dsh-theme-neko",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -3829,6 +4033,7 @@
       "updated_at": "2026-08-14T10:51:58Z",
       "is_plugin": true,
       "package": "dsh-deepseek-girl-pet",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -3844,6 +4049,7 @@
       "updated_at": "2026-08-14T04:56:09Z",
       "is_plugin": true,
       "package": "dsh-research-notes",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -3862,6 +4068,7 @@
       "updated_at": "2026-08-14T00:28:32Z",
       "is_plugin": true,
       "package": "dsh-cost",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -3880,6 +4087,7 @@
       "updated_at": "2026-08-14T07:12:06Z",
       "is_plugin": true,
       "package": "dsh-search-mcp",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -3895,6 +4103,7 @@
       "updated_at": "2026-08-14T05:40:19Z",
       "is_plugin": true,
       "package": "@deepseek-ai/dsh-deepresearch",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -3910,6 +4119,7 @@
       "updated_at": "2026-08-14T06:45:27Z",
       "is_plugin": true,
       "package": "@huanlin/dsh-plugin-anti-ads",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -3925,6 +4135,7 @@
       "updated_at": "2026-08-14T06:26:11Z",
       "is_plugin": true,
       "package": "@huanlin/dsh-plugin-better-sidebar-plugin-office",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -3940,6 +4151,7 @@
       "updated_at": "2026-08-14T06:26:24Z",
       "is_plugin": true,
       "package": "@huanlin/dsh-plugin-interpreters",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -3955,6 +4167,7 @@
       "updated_at": "2026-08-14T06:26:37Z",
       "is_plugin": true,
       "package": "@huanlin/dsh-plugin-sleep",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -3970,6 +4183,7 @@
       "updated_at": "2026-08-14T06:26:54Z",
       "is_plugin": true,
       "package": "@huanlin/dsh-plugin-ya-workspace-sidebar",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -3990,6 +4204,7 @@
       "updated_at": "2026-08-14T06:53:44Z",
       "is_plugin": true,
       "package": "dsh-lark-bridge",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -4010,6 +4225,7 @@
       "updated_at": "2026-08-14T02:59:42Z",
       "is_plugin": true,
       "package": "@jiesou/dsh-stream-rules",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -4025,6 +4241,7 @@
       "updated_at": "2026-08-14T11:02:09Z",
       "is_plugin": true,
       "package": "dsh-visual-plugin",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -4044,6 +4261,7 @@
       "updated_at": "2026-08-14T04:46:21Z",
       "is_plugin": true,
       "package": "@dsh-external/dsh-archive-viewer",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -4059,6 +4277,7 @@
       "updated_at": "2026-08-14T10:23:49Z",
       "is_plugin": true,
       "package": "dsh-token-usage",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -4074,6 +4293,7 @@
       "updated_at": "2026-08-14T10:57:26Z",
       "is_plugin": true,
       "package": "dsh-provider-model-configurator",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -4099,6 +4319,7 @@
       "updated_at": "2026-08-14T10:45:48Z",
       "is_plugin": true,
       "package": "@dsh-external/dsh-drop-to-path",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -4114,6 +4335,7 @@
       "updated_at": "2026-08-14T09:59:12Z",
       "is_plugin": true,
       "package": "dsh-client-ui-frosted-glass",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -4129,6 +4351,7 @@
       "updated_at": "2026-08-14T02:52:27Z",
       "is_plugin": true,
       "package": "dsh-recall",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -4144,6 +4367,7 @@
       "updated_at": "2026-08-14T05:47:57Z",
       "is_plugin": true,
       "package": "widget-dock",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -4161,6 +4385,7 @@
       "updated_at": "2026-08-14T10:37:22Z",
       "is_plugin": true,
       "package": "dsh-answer-pet",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -4182,6 +4407,7 @@
       "updated_at": "2026-08-14T00:41:59Z",
       "is_plugin": true,
       "package": "@omdsh/dsh-hub",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -4197,6 +4423,7 @@
       "updated_at": "2026-08-14T10:51:58Z",
       "is_plugin": true,
       "package": "@deepseek-ai/dsh-pet-corner",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -4216,6 +4443,7 @@
       "updated_at": "2026-08-14T03:11:03Z",
       "is_plugin": true,
       "package": "@deepseek-ai/dsh-tool-csv",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -4235,6 +4463,7 @@
       "updated_at": "2026-08-14T05:14:57Z",
       "is_plugin": true,
       "package": "@deepseek-ai/dsh-tool-stat",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -4251,6 +4480,7 @@
       ],
       "updated_at": "2026-08-14T05:04:34Z",
       "is_plugin": true,
+      "latest_version": "0.0.2",
       "source": "catalog"
     },
     {
@@ -4271,6 +4501,7 @@
       "updated_at": "2026-08-14T09:18:28Z",
       "is_plugin": true,
       "package": "@picgo/dsh-plugin",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -4286,6 +4517,7 @@
       "updated_at": "2026-08-14T10:17:40Z",
       "is_plugin": true,
       "package": "dsh-safe-delete",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -4318,6 +4550,7 @@
       "updated_at": "2026-08-14T02:33:59Z",
       "is_plugin": true,
       "package": "dsh-plugins-raincode",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -4338,6 +4571,7 @@
       ],
       "updated_at": "2026-08-14T05:06:00Z",
       "is_plugin": true,
+      "latest_version": "0.2.0",
       "source": "catalog"
     },
     {
@@ -4351,6 +4585,7 @@
       "updated_at": "2026-08-14T09:19:30Z",
       "is_plugin": true,
       "package": "@shgroup/dsh-serenity-plugin",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -4370,6 +4605,7 @@
       "updated_at": "2026-08-14T08:01:25Z",
       "is_plugin": true,
       "package": "@dsh-external/dsh-plannotator",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -4385,6 +4621,7 @@
       "updated_at": "2026-08-14T07:14:01Z",
       "is_plugin": true,
       "package": "dsh-balance",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -4402,6 +4639,7 @@
       "updated_at": "2026-08-14T09:19:37Z",
       "is_plugin": true,
       "package": "dsh-cue-plugin",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -4423,6 +4661,7 @@
       "updated_at": "2026-08-14T10:52:16Z",
       "is_plugin": true,
       "package": "dsh-ssh",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -4441,6 +4680,7 @@
       "updated_at": "2026-08-14T08:45:04Z",
       "is_plugin": true,
       "package": "@dsh-external/dsh-loop",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -4462,6 +4702,7 @@
       "updated_at": "2026-08-14T03:12:45Z",
       "is_plugin": true,
       "package": "codex-plugin-dsh",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -4480,6 +4721,7 @@
       "updated_at": "2026-08-14T10:06:00Z",
       "is_plugin": true,
       "package": "dsh-session-timeline",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -4495,6 +4737,7 @@
       "updated_at": "2026-08-14T09:30:15Z",
       "is_plugin": true,
       "package": "dsh-plugin-marketplace",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -4515,6 +4758,7 @@
       "updated_at": "2026-08-14T10:09:35Z",
       "is_plugin": true,
       "package": "dsh-llm-codex",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -4533,6 +4777,7 @@
       "updated_at": "2026-08-14T10:52:17Z",
       "is_plugin": true,
       "package": "dsh-prime-agent",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -4549,6 +4794,7 @@
       "updated_at": "2026-08-14T10:18:15Z",
       "is_plugin": true,
       "package": "dsh-telegram-bot",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -4571,6 +4817,7 @@
       ],
       "updated_at": "2026-08-13T16:41:55Z",
       "is_plugin": true,
+      "latest_version": "0.1.0",
       "source": "catalog"
     },
     {
@@ -4591,6 +4838,7 @@
       "updated_at": "2026-08-14T10:57:58Z",
       "is_plugin": true,
       "package": "dsh-expression",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -4607,6 +4855,7 @@
       "updated_at": "2026-08-13T16:42:06Z",
       "is_plugin": true,
       "package": "dsh-plugin-cost-tracker",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -4624,6 +4873,7 @@
       "updated_at": "2026-08-14T10:14:33Z",
       "is_plugin": true,
       "package": "dsh-plugin-opencode-bridge",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -4640,6 +4890,7 @@
       "updated_at": "2026-08-14T05:40:16Z",
       "is_plugin": true,
       "package": "@humanize/dsh-humanize",
+      "latest_version": "",
       "source": "discovered"
     },
     {
@@ -4664,6 +4915,7 @@
       ],
       "updated_at": "2026-08-14T05:21:23Z",
       "is_plugin": true,
+      "latest_version": "",
       "source": "catalog"
     },
     {
@@ -4676,6 +4928,7 @@
       "topics": [],
       "updated_at": "2026-08-14T08:47:00Z",
       "is_plugin": true,
+      "latest_version": "0.1.1",
       "source": "catalog"
     },
     {
@@ -4694,6 +4947,7 @@
       ],
       "updated_at": "2026-08-13T22:58:46Z",
       "is_plugin": true,
+      "latest_version": "",
       "source": "catalog"
     },
     {
@@ -4714,6 +4968,7 @@
       ],
       "updated_at": "2026-08-13T18:49:16Z",
       "is_plugin": true,
+      "latest_version": "0.2.1",
       "source": "catalog"
     },
     {
@@ -4733,6 +4988,7 @@
       ],
       "updated_at": "2026-08-14T03:18:48Z",
       "is_plugin": true,
+      "latest_version": "0.1.0",
       "source": "catalog"
     },
     {
@@ -4747,6 +5003,7 @@
       ],
       "updated_at": "2026-08-14T03:44:46Z",
       "is_plugin": true,
+      "latest_version": "0.1.0",
       "source": "catalog"
     },
     {
@@ -4761,6 +5018,7 @@
       ],
       "updated_at": "2026-08-14T10:50:31Z",
       "is_plugin": true,
+      "latest_version": "0.1.6",
       "source": "catalog"
     },
     {
@@ -4776,6 +5034,7 @@
       ],
       "updated_at": "2026-08-13T16:43:23Z",
       "is_plugin": true,
+      "latest_version": "0.4.0",
       "source": "catalog"
     },
     {
@@ -4791,6 +5050,7 @@
       ],
       "updated_at": "2026-08-14T10:52:02Z",
       "is_plugin": true,
+      "latest_version": "0.1.0",
       "source": "catalog"
     },
     {
@@ -4808,6 +5068,7 @@
       ],
       "updated_at": "2026-08-14T06:25:14Z",
       "is_plugin": "unknown",
+      "latest_version": "0.0.2",
       "source": "catalog"
     },
     {
@@ -4823,6 +5084,7 @@
       ],
       "updated_at": "2026-08-14T04:03:49Z",
       "is_plugin": true,
+      "latest_version": "",
       "source": "catalog"
     },
     {
@@ -4842,6 +5104,7 @@
       ],
       "updated_at": "2026-08-14T04:56:06Z",
       "is_plugin": true,
+      "latest_version": "",
       "source": "catalog"
     },
     {
@@ -4860,6 +5123,7 @@
       ],
       "updated_at": "2026-08-14T03:11:05Z",
       "is_plugin": true,
+      "latest_version": "0.0.1",
       "source": "catalog"
     },
     {
@@ -4878,6 +5142,7 @@
       ],
       "updated_at": "2026-08-14T03:11:09Z",
       "is_plugin": true,
+      "latest_version": "0.0.1",
       "source": "catalog"
     },
     {
@@ -4896,6 +5161,7 @@
       ],
       "updated_at": "2026-08-14T03:11:18Z",
       "is_plugin": true,
+      "latest_version": "0.0.1",
       "source": "catalog"
     },
     {
@@ -4911,6 +5177,7 @@
       ],
       "updated_at": "2026-08-14T10:52:14Z",
       "is_plugin": true,
+      "latest_version": "0.0.2",
       "source": "catalog"
     },
     {
@@ -4932,6 +5199,7 @@
       ],
       "updated_at": "2026-08-14T03:49:22Z",
       "is_plugin": true,
+      "latest_version": "0.1.0",
       "source": "catalog"
     },
     {
@@ -4944,6 +5212,7 @@
       "topics": [],
       "updated_at": "2026-08-14T10:13:28Z",
       "is_plugin": true,
+      "latest_version": "",
       "source": "catalog"
     },
     {
@@ -4959,6 +5228,7 @@
       ],
       "updated_at": "2026-08-14T04:01:24Z",
       "is_plugin": true,
+      "latest_version": "",
       "source": "catalog"
     },
     {
@@ -4971,6 +5241,7 @@
       "topics": [],
       "updated_at": "2026-08-14T11:02:16Z",
       "is_plugin": true,
+      "latest_version": "",
       "source": "catalog"
     },
     {
@@ -4986,6 +5257,7 @@
       ],
       "updated_at": "2026-08-14T04:54:16Z",
       "is_plugin": true,
+      "latest_version": "0.1.0",
       "source": "catalog"
     },
     {
@@ -5000,6 +5272,7 @@
       ],
       "updated_at": "2026-08-13T19:56:30Z",
       "is_plugin": true,
+      "latest_version": "",
       "source": "catalog"
     },
     {
@@ -5017,6 +5290,7 @@
       ],
       "updated_at": "2026-08-14T04:58:12Z",
       "is_plugin": true,
+      "latest_version": "0.1.0",
       "source": "catalog"
     },
     {
@@ -5032,6 +5306,7 @@
       ],
       "updated_at": "2026-08-14T07:49:40Z",
       "is_plugin": true,
+      "latest_version": "1.0.0",
       "source": "catalog"
     },
     {
@@ -5051,6 +5326,7 @@
       ],
       "updated_at": "2026-08-13T16:44:36Z",
       "is_plugin": true,
+      "latest_version": "",
       "source": "catalog"
     },
     {
@@ -5066,6 +5342,7 @@
       ],
       "updated_at": "2026-08-14T10:52:12Z",
       "is_plugin": true,
+      "latest_version": "0.9.1",
       "source": "catalog"
     },
     {
@@ -5081,6 +5358,7 @@
       ],
       "updated_at": "2026-08-14T10:51:59Z",
       "is_plugin": true,
+      "latest_version": "0.3.3",
       "source": "catalog"
     },
     {
@@ -5097,6 +5375,7 @@
       ],
       "updated_at": "2026-08-13T16:44:35Z",
       "is_plugin": true,
+      "latest_version": "0.0.2",
       "source": "catalog"
     },
     {
@@ -5116,6 +5395,7 @@
       ],
       "updated_at": "2026-08-13T16:47:11Z",
       "is_plugin": true,
+      "latest_version": "",
       "source": "catalog"
     },
     {
@@ -5131,6 +5411,7 @@
       ],
       "updated_at": "2026-08-13T16:46:15Z",
       "is_plugin": true,
+      "latest_version": "0.0.2",
       "source": "catalog"
     },
     {
@@ -5150,6 +5431,7 @@
       ],
       "updated_at": "2026-08-14T10:21:13Z",
       "is_plugin": true,
+      "latest_version": "0.2.0",
       "source": "catalog"
     },
     {
@@ -5165,6 +5447,7 @@
       ],
       "updated_at": "2026-08-14T06:25:39Z",
       "is_plugin": true,
+      "latest_version": "0.1.0",
       "source": "catalog"
     },
     {
@@ -5180,6 +5463,7 @@
       ],
       "updated_at": "2026-08-13T16:45:16Z",
       "is_plugin": true,
+      "latest_version": "0.1.0",
       "source": "catalog"
     },
     {
@@ -5192,6 +5476,7 @@
       "topics": [],
       "updated_at": "2026-08-14T10:31:16Z",
       "is_plugin": true,
+      "latest_version": "1.0.14",
       "source": "catalog"
     },
     {
@@ -5207,6 +5492,7 @@
       ],
       "updated_at": "2026-08-13T16:46:29Z",
       "is_plugin": true,
+      "latest_version": "0.1.0",
       "source": "catalog"
     },
     {
@@ -5222,6 +5508,7 @@
       ],
       "updated_at": "2026-08-14T10:02:46Z",
       "is_plugin": true,
+      "latest_version": "0.1.0",
       "source": "catalog"
     },
     {
@@ -5238,6 +5525,7 @@
       ],
       "updated_at": "2026-08-14T09:14:03Z",
       "is_plugin": true,
+      "latest_version": "0.1.0",
       "source": "catalog"
     },
     {
@@ -5250,6 +5538,7 @@
       "topics": [],
       "updated_at": "2026-08-14T09:43:20Z",
       "is_plugin": true,
+      "latest_version": "",
       "source": "catalog"
     },
     {
@@ -5267,6 +5556,7 @@
       ],
       "updated_at": "2026-08-14T08:34:18Z",
       "is_plugin": true,
+      "latest_version": "0.1.3",
       "source": "catalog"
     },
     {
@@ -5287,6 +5577,7 @@
       ],
       "updated_at": "2026-08-14T10:35:27Z",
       "is_plugin": true,
+      "latest_version": "",
       "source": "catalog"
     },
     {
@@ -5299,6 +5590,7 @@
       "topics": [],
       "updated_at": "2026-08-14T08:14:00Z",
       "is_plugin": true,
+      "latest_version": "0.2.0",
       "source": "catalog"
     },
     {
@@ -5317,6 +5609,7 @@
       ],
       "updated_at": "2026-08-14T01:53:21Z",
       "is_plugin": true,
+      "latest_version": "1.0.0",
       "source": "catalog"
     },
     {
@@ -5329,6 +5622,7 @@
       "topics": [],
       "updated_at": "2026-08-14T10:51:51Z",
       "is_plugin": true,
+      "latest_version": "0.1.0",
       "source": "catalog"
     },
     {
@@ -5346,6 +5640,7 @@
       ],
       "updated_at": "2026-08-14T03:20:06Z",
       "is_plugin": true,
+      "latest_version": "0.1.0",
       "source": "catalog"
     },
     {
@@ -5358,6 +5653,7 @@
       "topics": [],
       "updated_at": "2026-08-14T07:13:48Z",
       "is_plugin": true,
+      "latest_version": "0.2.0",
       "source": "catalog"
     },
     {
@@ -5373,6 +5669,7 @@
       ],
       "updated_at": "2026-08-14T11:01:37Z",
       "is_plugin": true,
+      "latest_version": "0.4.6",
       "source": "catalog"
     },
     {
@@ -5385,6 +5682,7 @@
       "topics": [],
       "updated_at": "2026-08-14T01:50:24Z",
       "is_plugin": true,
+      "latest_version": "0.3.0",
       "source": "catalog"
     },
     {
@@ -5400,6 +5698,7 @@
       ],
       "updated_at": "2026-08-14T10:59:50Z",
       "is_plugin": true,
+      "latest_version": "",
       "source": "catalog"
     },
     {
@@ -5414,6 +5713,7 @@
       ],
       "updated_at": "2026-08-14T04:49:06Z",
       "is_plugin": true,
+      "latest_version": "0.1.0",
       "source": "catalog"
     },
     {
@@ -5426,6 +5726,7 @@
       "topics": [],
       "updated_at": "2026-08-14T06:21:24Z",
       "is_plugin": true,
+      "latest_version": "",
       "source": "catalog"
     },
     {
@@ -5444,6 +5745,7 @@
       ],
       "updated_at": "2026-08-14T10:57:43Z",
       "is_plugin": true,
+      "latest_version": "",
       "source": "catalog"
     },
     {
@@ -5458,6 +5760,7 @@
       ],
       "updated_at": "2026-08-14T01:52:45Z",
       "is_plugin": true,
+      "latest_version": "0.1.0",
       "source": "catalog"
     },
     {
@@ -5470,6 +5773,7 @@
       "topics": [],
       "updated_at": "2026-08-14T08:35:36Z",
       "is_plugin": true,
+      "latest_version": "0.1.0-rc.6",
       "source": "catalog"
     },
     {
@@ -5482,6 +5786,7 @@
       "topics": [],
       "updated_at": "2026-08-14T09:36:30Z",
       "is_plugin": true,
+      "latest_version": "",
       "source": "catalog"
     },
     {
@@ -5500,6 +5805,7 @@
       ],
       "updated_at": "2026-08-14T10:38:07Z",
       "is_plugin": true,
+      "latest_version": "0.1.0",
       "source": "catalog"
     },
     {
@@ -5512,6 +5818,7 @@
       "topics": [],
       "updated_at": "2026-08-13T23:03:09Z",
       "is_plugin": true,
+      "latest_version": "0.1.0",
       "source": "catalog"
     },
     {
@@ -5524,6 +5831,7 @@
       "topics": [],
       "updated_at": "2026-08-14T09:41:03Z",
       "is_plugin": true,
+      "latest_version": "",
       "source": "catalog"
     },
     {
@@ -5540,6 +5848,7 @@
       ],
       "updated_at": "2026-08-14T00:59:04Z",
       "is_plugin": true,
+      "latest_version": "0.1.1",
       "source": "catalog"
     },
     {
@@ -5552,6 +5861,7 @@
       "topics": [],
       "updated_at": "2026-08-14T07:02:13Z",
       "is_plugin": true,
+      "latest_version": "",
       "source": "catalog"
     },
     {
@@ -5572,6 +5882,7 @@
       ],
       "updated_at": "2026-08-14T07:31:28Z",
       "is_plugin": true,
+      "latest_version": "0.1.4",
       "source": "catalog"
     },
     {
@@ -5584,6 +5895,7 @@
       "topics": [],
       "updated_at": "2026-08-14T04:19:05Z",
       "is_plugin": true,
+      "latest_version": "",
       "source": "catalog"
     },
     {
@@ -5604,6 +5916,7 @@
       ],
       "updated_at": "2026-08-14T07:57:42Z",
       "is_plugin": true,
+      "latest_version": "0.1.0",
       "source": "catalog"
     },
     {
@@ -5619,6 +5932,7 @@
       ],
       "updated_at": "2026-08-14T05:52:49Z",
       "is_plugin": true,
+      "latest_version": "",
       "source": "catalog"
     },
     {
@@ -5638,6 +5952,7 @@
       ],
       "updated_at": "2026-08-14T10:51:46Z",
       "is_plugin": true,
+      "latest_version": "0.1.0",
       "source": "catalog"
     },
     {
@@ -5650,6 +5965,7 @@
       "topics": [],
       "updated_at": "2026-08-14T09:47:21Z",
       "is_plugin": true,
+      "latest_version": "0.1.0",
       "source": "catalog"
     },
     {
@@ -5669,6 +5985,7 @@
       ],
       "updated_at": "2026-08-13T18:44:47Z",
       "is_plugin": true,
+      "latest_version": "0.1.0",
       "source": "catalog"
     },
     {
@@ -5683,6 +6000,7 @@
       ],
       "updated_at": "2026-08-14T10:47:09Z",
       "is_plugin": true,
+      "latest_version": "1.0.0",
       "source": "catalog"
     },
     {
@@ -5695,6 +6013,7 @@
       "topics": [],
       "updated_at": "2026-08-14T08:41:44Z",
       "is_plugin": true,
+      "latest_version": "0.1.10",
       "source": "catalog"
     }
   ]
