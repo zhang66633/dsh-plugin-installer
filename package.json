@@ -1,7 +1,7 @@
 {
   "name": "dsh-plugin-installer",
-  "version": "1.1.0",
-  "description": "Install & troubleshoot DeepSeek Harness (dsh) plugins — painlessly, even for complete beginners. Ships as a bundled skill-provider plugin.",
+  "version": "2.0.0",
+  "description": "DSH 插件商店 + 安装排障技能一体包：Web GUI「插件商店」页签浏览插件目录（名称/介绍/原链接），一键触发安装；内置 dsh-plugin-installer 技能作为安装后端引擎。",
   "type": "module",
   "main": "lib/index.js",
   "files": [
@@ -10,20 +10,34 @@
     "references",
     "scripts",
     "templates",
+    "data",
     "cordis.patch.yml",
     "README.md",
     "README.zh-CN.md",
     "LICENSE"
   ],
   "scripts": {
+    "build": "node scripts/build.mjs",
     "smoke": "node -e \"import('./lib/index.js').then(m => console.log('ok:', m.name, 'inject:', m.inject.join(',')))\"",
     "check": "bash scripts/check.sh",
     "test": "node --test",
-    "prepublishOnly": "npm run check && npm run test && npm run smoke"
+    "prepublishOnly": "npm run check && npm run test && npm run smoke && npm run build"
+  },
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
   },
   "dsh": {
     "bundle": {
       "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "inject": [
+        "@deepseek-ai/dsh-client-runtime",
+        "@deepseek-ai/dsh-client-ui-conversation"
+      ],
+      "platform": "web"
     }
   },
   "peerDependencies": {
@@ -32,6 +46,9 @@
   },
   "dependencies": {
     "yaml": "^2.5.0"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.2"
   },
   "license": "MIT"
 }

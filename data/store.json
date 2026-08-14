@@ -1,0 +1,1552 @@
+{
+  "generated_at": "2026-08-14T11:04:57+00:00",
+  "pipeline_commit": "d944652",
+  "total": 96,
+  "plugins": [
+    {
+      "name": "zhu1090093659/dsh-web-ui",
+      "url": "https://github.com/zhu1090093659/dsh-web-ui",
+      "description": "Plugin and skin collection for DeepSeek Harness (DSH) Web UI - task board, git graph, right-side panel, remote mobile UI, pet, live token stats, and skin center.",
+      "description_zh": "",
+      "category": "",
+      "stars": 1537,
+      "topics": [
+        "deepseek-harness",
+        "dsh",
+        "dsh-plugin",
+        "web-ui"
+      ],
+      "updated_at": "2026-08-14T11:01:38Z",
+      "is_plugin": true,
+      "source": "catalog"
+    },
+    {
+      "name": "liustack/modlens",
+      "url": "https://github.com/liustack/modlens",
+      "description": "The first vision plugin for DeepSeek Harness, and the vision bridge for every text-only coding agent. Paste an image, get structured JSON evidence (OCR, layout, semantics). | 全网第一个 DeepSeek Harness 视觉插件，为 DeepSeek、GLM 等纯文本模型外挂视觉能力，粘贴图片即得结构化 JSON 证据（OCR、版面、语义）。",
+      "description_zh": "",
+      "category": "",
+      "stars": 1079,
+      "topics": [
+        "agent-skills",
+        "claude-code",
+        "claude-skills",
+        "codex",
+        "cordis",
+        "deepseek",
+        "dsh",
+        "dsh-plugin",
+        "glm",
+        "harness",
+        "harness-engineering",
+        "hermes-agent",
+        "image-to-text",
+        "multimodal",
+        "ocr",
+        "openclaw",
+        "pi-agent",
+        "text-only-llm",
+        "vision",
+        "vision-transformer"
+      ],
+      "updated_at": "2026-08-14T11:02:09Z",
+      "is_plugin": true,
+      "source": "catalog"
+    },
+    {
+      "name": "ccch1mneyyy/dsh-TUI",
+      "url": "https://github.com/ccch1mneyyy/dsh-TUI",
+      "description": "解决DSH 官方尚无终端 TUI 痛点的补位之作，献给偏爱cli的各位极客：Claude Code 风格全屏交互终端插件——像素鲸鱼顶栏、实时工作状态行、思考流式展开、双击 Esc 回滚、上下文进度条 + TPS 仪表。npm 一键安装。",
+      "description_zh": "",
+      "category": "",
+      "stars": 717,
+      "topics": [
+        "claude-code",
+        "coding-agent",
+        "deepseek",
+        "deepseek-harness",
+        "dsh-plugin",
+        "ink",
+        "react",
+        "terminal",
+        "tui"
+      ],
+      "updated_at": "2026-08-14T10:53:41Z",
+      "is_plugin": true,
+      "source": "catalog"
+    },
+    {
+      "name": "anywhere-labs/deepseek-harness-desktop",
+      "url": "https://github.com/anywhere-labs/deepseek-harness-desktop",
+      "description": "基于官方 DeepSeek Harness 打造的 Electron 桌面端，深度适配 macOS 和 Windows，提供最佳的，开箱即用的体验。",
+      "description_zh": "",
+      "category": "",
+      "stars": 678,
+      "topics": [
+        "deepseek",
+        "deepseek-harness",
+        "dsh-plugin"
+      ],
+      "updated_at": "2026-08-14T11:02:29Z",
+      "is_plugin": true,
+      "source": "catalog"
+    },
+    {
+      "name": "dataelement/dsh-desktop",
+      "url": "https://github.com/dataelement/dsh-desktop",
+      "description": "Desktop app for DeepSeek Harness",
+      "description_zh": "",
+      "category": "",
+      "stars": 123,
+      "topics": [
+        "ai-agents",
+        "deepseek",
+        "desktop",
+        "dsh-plugins"
+      ],
+      "updated_at": "2026-08-14T11:02:37Z",
+      "is_plugin": true,
+      "source": "catalog"
+    },
+    {
+      "name": "csyangwen/dsh-memory-evolve",
+      "url": "https://github.com/csyangwen/dsh-memory-evolve",
+      "description": "为 DeepSeek Harness 带来「跨会话长期记忆 + 后台自我进化」能力的纯插件实现：五轨记忆 · git 分支感知 · 回合内自我审查 · 技能自我进化与技能管理器 · 四轨待办 · COI 调度 · 会话广播 · 会话搜索 · 提示词管理器 · 临时信息便签——零核心修改、零运行时依赖，随装随用、卸载即净。",
+      "description_zh": "",
+      "category": "",
+      "stars": 31,
+      "topics": [
+        "deepseek-harness",
+        "dsh",
+        "dsh-plugin"
+      ],
+      "updated_at": "2026-08-14T10:19:22Z",
+      "is_plugin": true,
+      "source": "catalog"
+    },
+    {
+      "name": "vlln/plugin-registry",
+      "url": "https://github.com/vlln/plugin-registry",
+      "description": "DSH 插件生态基建：薄控制台（浏览器面板管理官方 repository 插件，0 patch）+ make-dsh-plugin skill 官方插件开发引导",
+      "description_zh": "",
+      "category": "",
+      "stars": 28,
+      "topics": [
+        "console",
+        "deepseek-harness",
+        "dsh",
+        "dsh-plugin",
+        "dsh-repository-plugin",
+        "plugin-management",
+        "ui"
+      ],
+      "updated_at": "2026-08-14T08:38:11Z",
+      "is_plugin": true,
+      "source": "catalog"
+    },
+    {
+      "name": "lhh010/dsh-ui-whale",
+      "url": "https://github.com/lhh010/dsh-ui-whale",
+      "description": "【求⭐】🐋DSH Web UI 全手绘像素鲸鱼伙伴插件：会话标题栏常驻，平时眨眼/偶尔摆尾/动胸鳍，思考运行时持续动起来，回合完成头顶喷水，点击还会冒爱心，不工作时还会偷懒睡觉，零核心改动。 【喜欢的话就点点star⭐吧~】",
+      "description_zh": "",
+      "category": "",
+      "stars": 25,
+      "topics": [
+        "dsh",
+        "dsh-plugin"
+      ],
+      "updated_at": "2026-08-14T10:52:51Z",
+      "is_plugin": true,
+      "source": "catalog"
+    },
+    {
+      "name": "iuikj/dsh-desktop",
+      "url": "https://github.com/iuikj/dsh-desktop",
+      "description": "一个微调美观的DeepSeek harness客户端（欢迎插件加入）",
+      "description_zh": "",
+      "category": "",
+      "stars": 18,
+      "topics": [
+        "dsh-plugin"
+      ],
+      "updated_at": "2026-08-14T10:45:25Z",
+      "is_plugin": true,
+      "source": "catalog"
+    },
+    {
+      "name": "bruc3van/dsh-desktop",
+      "url": "https://github.com/bruc3van/dsh-desktop",
+      "description": "DeepSeek Harness Desktop 是一款第三方桌面客户端，通过直接加载官方 Web UI，为普通用户提供开箱即用的独立桌面体验：它可以自动复用本机已运行的官方实例，也可以使用安装包内置的 dsh 运行时启动服务，无需用户额外安装 Node.js 或 CLI，并提供智能连接、远程实例连接、托盘常驻、运行时监护和异常恢复等桌面增强。",
+      "description_zh": "",
+      "category": "",
+      "stars": 17,
+      "topics": [
+        "deepseek",
+        "deepseek-desktop",
+        "deepseek-harness",
+        "dsh-plugin"
+      ],
+      "updated_at": "2026-08-14T10:07:58Z",
+      "is_plugin": true,
+      "source": "catalog"
+    },
+    {
+      "name": "william-jin-cmu/dsh-vision",
+      "url": "https://github.com/william-jin-cmu/dsh-vision",
+      "description": "dsh 插件：给纯文本 DeepSeek 加视觉——view_image 工具桥接任意 OpenAI 兼容 VLM（默认智谱免费档，实测 4 厂商 10 模型）",
+      "description_zh": "",
+      "category": "",
+      "stars": 16,
+      "topics": [
+        "dsh",
+        "dsh-plugin"
+      ],
+      "updated_at": "2026-08-14T10:41:34Z",
+      "is_plugin": true,
+      "source": "catalog"
+    },
+    {
+      "name": "LoserFox/distill",
+      "url": "https://github.com/LoserFox/distill",
+      "description": "自动对话蒸馏：后台 subagent 反省 + 技能 create/update",
+      "description_zh": "",
+      "category": "",
+      "stars": 15,
+      "topics": [
+        "dsh-plugin"
+      ],
+      "updated_at": "2026-08-14T08:35:45Z",
+      "is_plugin": "unknown",
+      "source": "catalog"
+    },
+    {
+      "name": "chyra-moon/deepseek-harness-desktop",
+      "url": "https://github.com/chyra-moon/deepseek-harness-desktop",
+      "description": "DeepSeek Harness desktop shell: 1:1 replica of the official web UI as a Windows desktop app (community project)",
+      "description_zh": "",
+      "category": "",
+      "stars": 9,
+      "topics": [
+        "ai-agent",
+        "community-project",
+        "deepseek",
+        "desktop",
+        "dsh-plugin",
+        "electron",
+        "windows"
+      ],
+      "updated_at": "2026-08-14T10:00:55Z",
+      "is_plugin": true,
+      "source": "catalog"
+    },
+    {
+      "name": "oil-oil/dsh-vision",
+      "url": "https://github.com/oil-oil/dsh-vision",
+      "description": "Near-native image understanding for DeepSeek Harness",
+      "description_zh": "",
+      "category": "",
+      "stars": 8,
+      "topics": [
+        "deepseek-harness",
+        "dsh-plugin",
+        "image-understanding",
+        "multimodal",
+        "vision"
+      ],
+      "updated_at": "2026-08-14T10:49:38Z",
+      "is_plugin": true,
+      "source": "catalog"
+    },
+    {
+      "name": "lhh010/dsh-ui-progress",
+      "url": "https://github.com/lhh010/dsh-ui-progress",
+      "description": "DSH Web UI 会话进度插件：输入框停靠区常驻会话进度条（todos 真实进度 / 实时 token 生成速率 / 中断橘红态 / 待办提醒），零核心改动",
+      "description_zh": "",
+      "category": "",
+      "stars": 7,
+      "topics": [
+        "dsh",
+        "dsh-plugin"
+      ],
+      "updated_at": "2026-08-14T02:52:26Z",
+      "is_plugin": true,
+      "source": "catalog"
+    },
+    {
+      "name": "omdsh-dev/deepseek-harness-desktop",
+      "url": "https://github.com/omdsh-dev/deepseek-harness-desktop",
+      "description": "DSH 桌面应用打包器",
+      "description_zh": "",
+      "category": "",
+      "stars": 7,
+      "topics": [
+        "bundler",
+        "deepseek-harness",
+        "desktop-app",
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "updated_at": "2026-08-14T10:49:06Z",
+      "is_plugin": true,
+      "source": "catalog"
+    },
+    {
+      "name": "linenxi-ctrl/dsh-vision",
+      "url": "https://github.com/linenxi-ctrl/dsh-vision",
+      "description": "为 DeepSeek Harness 增加外挂识图模型：圆形鲸鱼按钮、发送图片识图自动回传、模型自主截图+识图工具、多协议自动适配、小白一键安装（未装 Node.js 自动下载）",
+      "description_zh": "",
+      "category": "",
+      "stars": 6,
+      "topics": [
+        "ai",
+        "deepseek",
+        "deepseek-harness",
+        "harness",
+        "image-recognition",
+        "llm",
+        "ocr",
+        "plugin",
+        "screenshot",
+        "vision"
+      ],
+      "updated_at": "2026-08-14T10:15:11Z",
+      "is_plugin": true,
+      "source": "catalog"
+    },
+    {
+      "name": "LoserFox/telegram",
+      "url": "https://github.com/LoserFox/telegram",
+      "description": "Telegram Bot API 桥接插件：长轮询、per-chat 会话、HTML 格式化",
+      "description_zh": "",
+      "category": "",
+      "stars": 6,
+      "topics": [
+        "dsh-plugin"
+      ],
+      "updated_at": "2026-08-13T16:39:31Z",
+      "is_plugin": true,
+      "source": "catalog"
+    },
+    {
+      "name": "luo-ross/dsh-desktop",
+      "url": "https://github.com/luo-ross/dsh-desktop",
+      "description": "Unofficial community desktop edition of DeepSeek Harness for Windows",
+      "description_zh": "",
+      "category": "",
+      "stars": 6,
+      "topics": [
+        "ai-agent",
+        "deepseek",
+        "deepseek-harness",
+        "desktop-app",
+        "electron",
+        "windows"
+      ],
+      "updated_at": "2026-08-14T06:44:35Z",
+      "is_plugin": true,
+      "source": "catalog"
+    },
+    {
+      "name": "turtle1999/turtle-ui",
+      "url": "https://github.com/turtle1999/turtle-ui",
+      "description": "as is, no warranty",
+      "description_zh": "",
+      "category": "",
+      "stars": 5,
+      "topics": [
+        "deepseek-harness",
+        "dsh",
+        "dsh-plugin"
+      ],
+      "updated_at": "2026-08-14T07:03:01Z",
+      "is_plugin": "unknown",
+      "source": "catalog"
+    },
+    {
+      "name": "foolgry/dsh-desktop",
+      "url": "https://github.com/foolgry/dsh-desktop",
+      "description": "Download-and-run desktop build of DeepSeek Harness — Electron shell with embedded Node, no npm required.",
+      "description_zh": "",
+      "category": "",
+      "stars": 4,
+      "topics": [],
+      "updated_at": "2026-08-14T07:02:03Z",
+      "is_plugin": true,
+      "source": "catalog"
+    },
+    {
+      "name": "longyu065/dsh-desktop",
+      "url": "https://github.com/longyu065/dsh-desktop",
+      "description": "Desktop shell for DeepSeek Harness Web GUI — auto-installs dsh, native macOS tray, packaged for macOS & Windows.",
+      "description_zh": "",
+      "category": "",
+      "stars": 4,
+      "topics": [
+        "dsh-plugin",
+        "dsh-plugins"
+      ],
+      "updated_at": "2026-08-14T04:11:36Z",
+      "is_plugin": true,
+      "source": "catalog"
+    },
+    {
+      "name": "omdsh-dev/dsh-tool-calculator",
+      "url": "https://github.com/omdsh-dev/dsh-tool-calculator",
+      "description": "DSH 计算器工具插件：安全的数学表达式求值器，零依赖递归下降解析器",
+      "description_zh": "",
+      "category": "",
+      "stars": 4,
+      "topics": [
+        "calculator",
+        "dsh",
+        "dsh-plugin",
+        "expression-evaluator",
+        "math"
+      ],
+      "updated_at": "2026-08-14T05:28:38Z",
+      "is_plugin": true,
+      "source": "catalog"
+    },
+    {
+      "name": "william-jin-cmu/dsh-companion",
+      "url": "https://github.com/william-jin-cmu/dsh-companion",
+      "description": "DeepSeek Harness 的常驻桌面助手：全局唤起、定时自动化、快捷回复、插件市场",
+      "description_zh": "",
+      "category": "",
+      "stars": 4,
+      "topics": [
+        "dsh",
+        "dsh-plugin"
+      ],
+      "updated_at": "2026-08-14T08:35:02Z",
+      "is_plugin": true,
+      "source": "catalog"
+    },
+    {
+      "name": "xingj404-lab/dsh-desktop",
+      "url": "https://github.com/xingj404-lab/dsh-desktop",
+      "description": "deepseek harness desktop",
+      "description_zh": "",
+      "category": "",
+      "stars": 4,
+      "topics": [],
+      "updated_at": "2026-08-14T10:58:57Z",
+      "is_plugin": true,
+      "source": "catalog"
+    },
+    {
+      "name": "omdsh-dev/Qwen-MM-Plugins",
+      "url": "https://github.com/omdsh-dev/Qwen-MM-Plugins",
+      "description": "Qwen-MM-Plugins支持",
+      "description_zh": "",
+      "category": "",
+      "stars": 3,
+      "topics": [
+        "dsh",
+        "dsh-plugin",
+        "qwen"
+      ],
+      "updated_at": "2026-08-14T05:04:34Z",
+      "is_plugin": true,
+      "source": "catalog"
+    },
+    {
+      "name": "SnowCrescenter-tech/dsh-desktop",
+      "url": "https://github.com/SnowCrescenter-tech/dsh-desktop",
+      "description": "DeepSeek Harness 桌面版 — 原生 Windows 桌面壳（无边框窗口 / 系统托盘 / 原生通知 / 单实例 / 开机自启）| Native Windows desktop shell for DeepSeek Harness (frameless window, tray, native notifications, single-instance, auto-launch)",
+      "description_zh": "",
+      "category": "",
+      "stars": 3,
+      "topics": [
+        "deepseek",
+        "deepseek-harness",
+        "desktop",
+        "dsh",
+        "dsh-plugin",
+        "electron",
+        "windows"
+      ],
+      "updated_at": "2026-08-14T05:06:00Z",
+      "is_plugin": true,
+      "source": "catalog"
+    },
+    {
+      "name": "yyh-001/dsh-companion",
+      "url": "https://github.com/yyh-001/dsh-companion",
+      "description": "DeepSeek 陪伴模式插件 —— 人设、记忆、聊得下去：SOUL 人格 + Hermes 长期记忆，可选 QQ 通道",
+      "description_zh": "",
+      "category": "",
+      "stars": 3,
+      "topics": [
+        "companion",
+        "companion-mode",
+        "deepseek",
+        "deepseek-harness",
+        "dsh-plugin",
+        "memory",
+        "persona",
+        "qq-bot",
+        "selfloom"
+      ],
+      "updated_at": "2026-08-13T16:41:55Z",
+      "is_plugin": true,
+      "source": "catalog"
+    },
+    {
+      "name": "zsyu9779/dsh-desktop",
+      "url": "https://github.com/zsyu9779/dsh-desktop",
+      "description": "Unofficial cross-platform desktop app for DeepSeek Harness. Native Wails shell for the DSH Web UI on macOS, Windows, and Linux.",
+      "description_zh": "",
+      "category": "",
+      "stars": 3,
+      "topics": [
+        "ai-agent",
+        "cross-platform",
+        "deepseek",
+        "deepseek-harness",
+        "desktop",
+        "dsh-plugin",
+        "golang",
+        "linux",
+        "macos",
+        "wails",
+        "windows"
+      ],
+      "updated_at": "2026-08-14T05:21:23Z",
+      "is_plugin": true,
+      "source": "catalog"
+    },
+    {
+      "name": "Aufhcegak/dsh-desktop",
+      "url": "https://github.com/Aufhcegak/dsh-desktop",
+      "description": "DeepSeek Harness Web GUI desktop launcher (Windows) - native window shell, no UI changes",
+      "description_zh": "",
+      "category": "",
+      "stars": 2,
+      "topics": [],
+      "updated_at": "2026-08-14T08:47:00Z",
+      "is_plugin": true,
+      "source": "catalog"
+    },
+    {
+      "name": "ccch1mneyyy/dsh-working-activity",
+      "url": "https://github.com/ccch1mneyyy/dsh-working-activity",
+      "description": "DSH 实时模型工作状态行：俏皮思考文案、运行中的工具、回合总结、自我叙述（⏵）— 用于 TUI 提示栏与 Web UI",
+      "description_zh": "",
+      "category": "",
+      "stars": 2,
+      "topics": [
+        "coding-agent",
+        "deepseek",
+        "deepseek-harness",
+        "dsh-plugin",
+        "status-line"
+      ],
+      "updated_at": "2026-08-13T22:58:46Z",
+      "is_plugin": true,
+      "source": "catalog"
+    },
+    {
+      "name": "HaoyueQin/deepseek-harness-desktop",
+      "url": "https://github.com/HaoyueQin/deepseek-harness-desktop",
+      "description": "A desktop shell for DeepSeek Harness — the pluggable AI agent harness from DeepSeek. Wrap the official dsh web UI into a native-feeling, always-on desktop app. / 为 DeepSeek Harness（DeepSeek 开源的可插拔 AI Agent harness）打造的桌面应用壳，把官方 dsh web 界面包装成原生质感、常驻后台的桌面应用。",
+      "description_zh": "",
+      "category": "",
+      "stars": 2,
+      "topics": [
+        "deepseek",
+        "deepseek-ai",
+        "deepseek-harness",
+        "deepseek-v4",
+        "dsh",
+        "dsh-plugin",
+        "dsh-plugins"
+      ],
+      "updated_at": "2026-08-13T18:49:16Z",
+      "is_plugin": true,
+      "source": "catalog"
+    },
+    {
+      "name": "kevenxz/dsh-desktop",
+      "url": "https://github.com/kevenxz/dsh-desktop",
+      "description": "Windows desktop client for DeepSeek Harness — native window, tray, shared DSH profiles and sessions.",
+      "description_zh": "",
+      "category": "",
+      "stars": 2,
+      "topics": [
+        "deepseek-harness",
+        "desktop-app",
+        "dsh",
+        "dsh-plugin",
+        "electron",
+        "windows"
+      ],
+      "updated_at": "2026-08-14T03:18:48Z",
+      "is_plugin": true,
+      "source": "catalog"
+    },
+    {
+      "name": "KnCRJVirX/dsh-desktop",
+      "url": "https://github.com/KnCRJVirX/dsh-desktop",
+      "description": "Desktop wrapper for the DeepSeek Harness (DSH). Deepseek Haeness 的 Electron 桌面端封装。",
+      "description_zh": "",
+      "category": "",
+      "stars": 2,
+      "topics": [
+        "dsh-plugin"
+      ],
+      "updated_at": "2026-08-14T03:44:46Z",
+      "is_plugin": true,
+      "source": "catalog"
+    },
+    {
+      "name": "liguobao/dsh-desktop",
+      "url": "https://github.com/liguobao/dsh-desktop",
+      "description": "An independent, open-source desktop wrapper for DeepSeek Harness. It starts the bundled @deepseek-ai/dsh Web UI locally and loads it in a hardened Electron window on Linux, macOS, and Windows.",
+      "description_zh": "",
+      "category": "",
+      "stars": 2,
+      "topics": [
+        "dsh-plugin"
+      ],
+      "updated_at": "2026-08-14T10:50:31Z",
+      "is_plugin": true,
+      "source": "catalog"
+    },
+    {
+      "name": "Moeblack/dsh-prompt-studio",
+      "url": "https://github.com/Moeblack/dsh-prompt-studio",
+      "description": "DSH plugin: edit user and built-in system-prompt sections with live preview (Prompt Studio)",
+      "description_zh": "",
+      "category": "",
+      "stars": 2,
+      "topics": [
+        "dsh",
+        "dsh-plugin"
+      ],
+      "updated_at": "2026-08-13T16:43:23Z",
+      "is_plugin": true,
+      "source": "catalog"
+    },
+    {
+      "name": "Moeblack/dsh-skins",
+      "url": "https://github.com/Moeblack/dsh-skins",
+      "description": "Mirror of dsh-external/dsh-skins + feat: harbor (夕港) dusk-harbor skin",
+      "description_zh": "",
+      "category": "",
+      "stars": 2,
+      "topics": [
+        "dsh",
+        "dsh-plugin"
+      ],
+      "updated_at": "2026-08-14T10:52:02Z",
+      "is_plugin": true,
+      "source": "catalog"
+    },
+    {
+      "name": "morlay/session-persistence-rdb",
+      "url": "https://github.com/morlay/session-persistence-rdb",
+      "description": "session 关系型数据库持久化",
+      "description_zh": "",
+      "category": "",
+      "stars": 2,
+      "topics": [
+        "dsh",
+        "dsh-plugin",
+        "dsh-session-persistence",
+        "rdb"
+      ],
+      "updated_at": "2026-08-14T06:25:14Z",
+      "is_plugin": "unknown",
+      "source": "catalog"
+    },
+    {
+      "name": "mrbbbaixue/dsh-desktop",
+      "url": "https://github.com/mrbbbaixue/dsh-desktop",
+      "description": ".NET 10 WPF + WebView2 desktop launcher for DeepSeek Harness (dsh): managed child process, tray controls, HiDPI, native title bar theme following",
+      "description_zh": "",
+      "category": "",
+      "stars": 2,
+      "topics": [
+        "dsh-plugin",
+        "dsh-plugins"
+      ],
+      "updated_at": "2026-08-14T04:03:49Z",
+      "is_plugin": true,
+      "source": "catalog"
+    },
+    {
+      "name": "omdsh-dev/dsh-github-integration",
+      "url": "https://github.com/omdsh-dev/dsh-github-integration",
+      "description": "",
+      "description_zh": "",
+      "category": "",
+      "stars": 2,
+      "topics": [
+        "deepseek-harness",
+        "developer-tools",
+        "dsh",
+        "dsh-plugin",
+        "github-actions",
+        "workflow-automation"
+      ],
+      "updated_at": "2026-08-14T04:56:06Z",
+      "is_plugin": true,
+      "source": "catalog"
+    },
+    {
+      "name": "omdsh-dev/dsh-tool-encoding",
+      "url": "https://github.com/omdsh-dev/dsh-tool-encoding",
+      "description": "DSH 编码/哈希工具插件：base64/base64url/url/hex 编解码、md5/sha1/sha256/sha512 哈希、UUID 生成，零依赖",
+      "description_zh": "",
+      "category": "",
+      "stars": 2,
+      "topics": [
+        "base64",
+        "dsh",
+        "dsh-plugin",
+        "encoding",
+        "hash"
+      ],
+      "updated_at": "2026-08-14T03:11:05Z",
+      "is_plugin": true,
+      "source": "catalog"
+    },
+    {
+      "name": "omdsh-dev/dsh-tool-json",
+      "url": "https://github.com/omdsh-dev/dsh-tool-json",
+      "description": "DSH JSON 查询工具插件：JMESPath 子集查询，零依赖递归下降解析器",
+      "description_zh": "",
+      "category": "",
+      "stars": 2,
+      "topics": [
+        "dsh",
+        "dsh-plugin",
+        "jmespath",
+        "json",
+        "query"
+      ],
+      "updated_at": "2026-08-14T03:11:09Z",
+      "is_plugin": true,
+      "source": "catalog"
+    },
+    {
+      "name": "omdsh-dev/dsh-tool-time",
+      "url": "https://github.com/omdsh-dev/dsh-tool-time",
+      "description": "DSH 时间工具插件：严格 ISO 8601 解析、IANA 时区转换、UTC 日历运算、固定时长差，零依赖",
+      "description_zh": "",
+      "category": "",
+      "stars": 2,
+      "topics": [
+        "dsh",
+        "dsh-plugin",
+        "iso8601",
+        "time",
+        "timezone"
+      ],
+      "updated_at": "2026-08-14T03:11:18Z",
+      "is_plugin": true,
+      "source": "catalog"
+    },
+    {
+      "name": "omdsh-dev/ex-setting",
+      "url": "https://github.com/omdsh-dev/ex-setting",
+      "description": "DSH的设置扩展",
+      "description_zh": "",
+      "category": "",
+      "stars": 2,
+      "topics": [
+        "dsh",
+        "dsh-plugin"
+      ],
+      "updated_at": "2026-08-14T10:52:14Z",
+      "is_plugin": true,
+      "source": "catalog"
+    },
+    {
+      "name": "Tieboyh/dsh-session-search",
+      "url": "https://github.com/Tieboyh/dsh-session-search",
+      "description": "Index-free cross-agent session search for DeepSeek Harness",
+      "description_zh": "",
+      "category": "",
+      "stars": 2,
+      "topics": [
+        "deepseek",
+        "deepseek-harness",
+        "dsh",
+        "dsh-plugin",
+        "plugin",
+        "search",
+        "session-search",
+        "typescript"
+      ],
+      "updated_at": "2026-08-14T03:49:22Z",
+      "is_plugin": true,
+      "source": "catalog"
+    },
+    {
+      "name": "bournesec/dsh-desktop",
+      "url": "https://github.com/bournesec/dsh-desktop",
+      "description": "Desktop wrapper for DeepSeek Harness",
+      "description_zh": "",
+      "category": "",
+      "stars": 1,
+      "topics": [],
+      "updated_at": "2026-08-14T10:13:28Z",
+      "is_plugin": true,
+      "source": "catalog"
+    },
+    {
+      "name": "czzzlq/deepseek-harness-desktop",
+      "url": "https://github.com/czzzlq/deepseek-harness-desktop",
+      "description": "deepseek-harness-desktop / deepseek-harness桌面端",
+      "description_zh": "",
+      "category": "",
+      "stars": 1,
+      "topics": [
+        "dsh",
+        "dsh-plugin"
+      ],
+      "updated_at": "2026-08-14T04:01:24Z",
+      "is_plugin": true,
+      "source": "catalog"
+    },
+    {
+      "name": "Esy-Yse/dsh-desktop",
+      "url": "https://github.com/Esy-Yse/dsh-desktop",
+      "description": "DeepSeek Harness Windows Launcher is a portable desktop app for DeepSeek Harness. It provides local AI chat, workspace and session management, model settings, agents, tools, plugins, workflows, themes, and tray controls.",
+      "description_zh": "",
+      "category": "",
+      "stars": 1,
+      "topics": [],
+      "updated_at": "2026-08-14T11:02:16Z",
+      "is_plugin": true,
+      "source": "catalog"
+    },
+    {
+      "name": "flee42/dsh-desktop",
+      "url": "https://github.com/flee42/dsh-desktop",
+      "description": "DeepSeek Harness（DSH）的桌面版启动器",
+      "description_zh": "",
+      "category": "",
+      "stars": 1,
+      "topics": [
+        "dsh",
+        "dsh-plugin"
+      ],
+      "updated_at": "2026-08-14T04:54:16Z",
+      "is_plugin": true,
+      "source": "catalog"
+    },
+    {
+      "name": "kyorakuyk/dsh-desktop",
+      "url": "https://github.com/kyorakuyk/dsh-desktop",
+      "description": "",
+      "description_zh": "",
+      "category": "",
+      "stars": 1,
+      "topics": [
+        "dsh-plugin"
+      ],
+      "updated_at": "2026-08-13T19:56:30Z",
+      "is_plugin": true,
+      "source": "catalog"
+    },
+    {
+      "name": "MashedPotato817/dsh-tool-browser",
+      "url": "https://github.com/MashedPotato817/dsh-tool-browser",
+      "description": "Native browser automation tools for DeepSeek Harness, powered by Playwright + Edge",
+      "description_zh": "",
+      "category": "",
+      "stars": 1,
+      "topics": [
+        "browser",
+        "deepseek-harness",
+        "dsh-plugin",
+        "playwright"
+      ],
+      "updated_at": "2026-08-14T04:58:12Z",
+      "is_plugin": true,
+      "source": "catalog"
+    },
+    {
+      "name": "o-Sakurajimamai-o/dsh-desktop",
+      "url": "https://github.com/o-Sakurajimamai-o/dsh-desktop",
+      "description": "DeepSeek Harness Desktop/App",
+      "description_zh": "",
+      "category": "",
+      "stars": 1,
+      "topics": [
+        "desktop-app",
+        "dsh-plugin"
+      ],
+      "updated_at": "2026-08-14T07:49:40Z",
+      "is_plugin": true,
+      "source": "catalog"
+    },
+    {
+      "name": "omdsh-dev/dsh-tool-browser",
+      "url": "https://github.com/omdsh-dev/dsh-tool-browser",
+      "description": "",
+      "description_zh": "",
+      "category": "",
+      "stars": 1,
+      "topics": [
+        "automation",
+        "browser-tools",
+        "deepseek-harness",
+        "developer-tools",
+        "dsh",
+        "dsh-plugin"
+      ],
+      "updated_at": "2026-08-13T16:44:36Z",
+      "is_plugin": true,
+      "source": "catalog"
+    },
+    {
+      "name": "omdsh-dev/dsh-ui-progress",
+      "url": "https://github.com/omdsh-dev/dsh-ui-progress",
+      "description": "DSH Web UI 会话进度插件：输入框停靠区常驻会话进度条（todos 真实进度 / 实时 token 生成速率 / 中断橘红态 / 待办提醒），零核心改动",
+      "description_zh": "",
+      "category": "",
+      "stars": 1,
+      "topics": [
+        "dsh",
+        "dsh-plugin"
+      ],
+      "updated_at": "2026-08-14T10:52:12Z",
+      "is_plugin": true,
+      "source": "catalog"
+    },
+    {
+      "name": "omdsh-dev/dsh-ui-whale",
+      "url": "https://github.com/omdsh-dev/dsh-ui-whale",
+      "description": "【求⭐】🐋DSH Web UI 全手绘像素鲸鱼伙伴插件：会话标题栏常驻，平时眨眼/偶尔摆尾/动胸鳍，思考运行时持续动起来，回合完成头顶喷水，点击还会冒爱心，不工作时还会偷懒睡觉，零核心改动。 【喜欢的话就点点star⭐吧~】",
+      "description_zh": "",
+      "category": "",
+      "stars": 1,
+      "topics": [
+        "dsh",
+        "dsh-plugin"
+      ],
+      "updated_at": "2026-08-14T10:51:59Z",
+      "is_plugin": true,
+      "source": "catalog"
+    },
+    {
+      "name": "omdsh-dev/sandbox-mxc",
+      "url": "https://github.com/omdsh-dev/sandbox-mxc",
+      "description": "微软跨平台沙盒支持",
+      "description_zh": "",
+      "category": "",
+      "stars": 1,
+      "topics": [
+        "dsh",
+        "dsh-plugin",
+        "sandbox"
+      ],
+      "updated_at": "2026-08-13T16:44:35Z",
+      "is_plugin": true,
+      "source": "catalog"
+    },
+    {
+      "name": "omdsh-dev/toybox",
+      "url": "https://github.com/omdsh-dev/toybox",
+      "description": "",
+      "description_zh": "",
+      "category": "",
+      "stars": 1,
+      "topics": [
+        "deepseek-harness",
+        "developer-tools",
+        "dsh",
+        "dsh-plugin",
+        "mcp",
+        "typescript"
+      ],
+      "updated_at": "2026-08-13T16:47:11Z",
+      "is_plugin": true,
+      "source": "catalog"
+    },
+    {
+      "name": "omdsh-dev/web-components",
+      "url": "https://github.com/omdsh-dev/web-components",
+      "description": "web-components支持",
+      "description_zh": "",
+      "category": "",
+      "stars": 1,
+      "topics": [
+        "dsh",
+        "dsh-plugin"
+      ],
+      "updated_at": "2026-08-13T16:46:15Z",
+      "is_plugin": true,
+      "source": "catalog"
+    },
+    {
+      "name": "ouyangyipeng/dsh-desktop",
+      "url": "https://github.com/ouyangyipeng/dsh-desktop",
+      "description": "Unofficial desktop launcher and runtime supervisor for DeepSeek Harness.",
+      "description_zh": "",
+      "category": "",
+      "stars": 1,
+      "topics": [
+        "deepseek-harness",
+        "desktop-app",
+        "dsh-plugin",
+        "electron",
+        "macos",
+        "windows"
+      ],
+      "updated_at": "2026-08-14T10:21:13Z",
+      "is_plugin": true,
+      "source": "catalog"
+    },
+    {
+      "name": "oxygenaaaaa/dsh-desktop",
+      "url": "https://github.com/oxygenaaaaa/dsh-desktop",
+      "description": "DeepSeek Harness as a Windows desktop app — one-click install, ready to use",
+      "description_zh": "",
+      "category": "",
+      "stars": 1,
+      "topics": [
+        "deepseek",
+        "dsh-plugin"
+      ],
+      "updated_at": "2026-08-14T06:25:39Z",
+      "is_plugin": true,
+      "source": "catalog"
+    },
+    {
+      "name": "Proton1917/dsh-live-stats",
+      "url": "https://github.com/Proton1917/dsh-live-stats",
+      "description": "Live token estimates and true streaming TPS for DeepSeek Harness Web",
+      "description_zh": "",
+      "category": "",
+      "stars": 1,
+      "topics": [
+        "deepseek-harness",
+        "dsh-plugin"
+      ],
+      "updated_at": "2026-08-13T16:45:16Z",
+      "is_plugin": true,
+      "source": "catalog"
+    },
+    {
+      "name": "rzdfzcl/dsh-desktop",
+      "url": "https://github.com/rzdfzcl/dsh-desktop",
+      "description": "deepseek harness desktop",
+      "description_zh": "",
+      "category": "",
+      "stars": 1,
+      "topics": [],
+      "updated_at": "2026-08-14T10:31:16Z",
+      "is_plugin": true,
+      "source": "catalog"
+    },
+    {
+      "name": "william-jin-cmu/dsh-artifact",
+      "url": "https://github.com/william-jin-cmu/dsh-artifact",
+      "description": "dsh 插件：文件交付协议——send_artifact 工具经 tool/result meta 携带结构化描述子，任意客户端可渲染",
+      "description_zh": "",
+      "category": "",
+      "stars": 1,
+      "topics": [
+        "dsh",
+        "dsh-plugin"
+      ],
+      "updated_at": "2026-08-13T16:46:29Z",
+      "is_plugin": true,
+      "source": "catalog"
+    },
+    {
+      "name": "xiaoshihou514/dsh-vision",
+      "url": "https://github.com/xiaoshihou514/dsh-vision",
+      "description": "DeepSeek Harness: vision",
+      "description_zh": "",
+      "category": "",
+      "stars": 1,
+      "topics": [
+        "dsh",
+        "dsh-plugin"
+      ],
+      "updated_at": "2026-08-14T10:02:46Z",
+      "is_plugin": true,
+      "source": "catalog"
+    },
+    {
+      "name": "zhenghaoyang24/dsh-desktop",
+      "url": "https://github.com/zhenghaoyang24/dsh-desktop",
+      "description": "DeepSeek Harness desktop.DeepSeek Harness 桌面端。",
+      "description_zh": "",
+      "category": "",
+      "stars": 1,
+      "topics": [
+        "deepseek",
+        "dsh",
+        "harness"
+      ],
+      "updated_at": "2026-08-14T09:14:03Z",
+      "is_plugin": true,
+      "source": "catalog"
+    },
+    {
+      "name": "zktdyx/dsh-desktop",
+      "url": "https://github.com/zktdyx/dsh-desktop",
+      "description": "DeepSeek Harness desktop launcher",
+      "description_zh": "",
+      "category": "",
+      "stars": 1,
+      "topics": [],
+      "updated_at": "2026-08-14T09:43:20Z",
+      "is_plugin": true,
+      "source": "catalog"
+    },
+    {
+      "name": "237229953-create/dsh-vision",
+      "url": "https://github.com/237229953-create/dsh-vision",
+      "description": "DSH plugin: text-only models (e.g. DeepSeek-V4) automatically see images via a vision model. Official surface-replace, cache-friendly, human transcript untouched. 纯文本模型自动识图桥",
+      "description_zh": "",
+      "category": "",
+      "stars": 0,
+      "topics": [
+        "deepseek-harness",
+        "dsh-plugin",
+        "multimodal",
+        "vision"
+      ],
+      "updated_at": "2026-08-14T08:34:18Z",
+      "is_plugin": true,
+      "source": "catalog"
+    },
+    {
+      "name": "antinomie1/deepseek-harness-desktop",
+      "url": "https://github.com/antinomie1/deepseek-harness-desktop",
+      "description": "A minimal Tauri desktop shell for DeepSeek Harness (dsh)",
+      "description_zh": "",
+      "category": "",
+      "stars": 0,
+      "topics": [
+        "ai",
+        "deepseek",
+        "deepseek-harness",
+        "desktop",
+        "dsh",
+        "dsh-plugin",
+        "tauri"
+      ],
+      "updated_at": "2026-08-14T10:35:27Z",
+      "is_plugin": true,
+      "source": "catalog"
+    },
+    {
+      "name": "AyaXshiN/dsh-desktop",
+      "url": "https://github.com/AyaXshiN/dsh-desktop",
+      "description": "deepseek harness-desktop",
+      "description_zh": "",
+      "category": "",
+      "stars": 0,
+      "topics": [],
+      "updated_at": "2026-08-14T08:14:00Z",
+      "is_plugin": true,
+      "source": "catalog"
+    },
+    {
+      "name": "cnskycn/deepseek-harness-desktop",
+      "url": "https://github.com/cnskycn/deepseek-harness-desktop",
+      "description": "Desktop app wrapper for DeepSeek Harness (dsh) Web UI - one-click Windows installer",
+      "description_zh": "",
+      "category": "",
+      "stars": 0,
+      "topics": [
+        "deepseek-harness",
+        "desktop-app",
+        "dsh",
+        "dsh-plugin",
+        "electron"
+      ],
+      "updated_at": "2026-08-14T01:53:21Z",
+      "is_plugin": true,
+      "source": "catalog"
+    },
+    {
+      "name": "CuiLikun/dsh-desktop",
+      "url": "https://github.com/CuiLikun/dsh-desktop",
+      "description": "Unofficial Windows desktop launcher for DeepSeek Harness",
+      "description_zh": "",
+      "category": "",
+      "stars": 0,
+      "topics": [],
+      "updated_at": "2026-08-14T10:51:51Z",
+      "is_plugin": true,
+      "source": "catalog"
+    },
+    {
+      "name": "cyzlmh/dsh-pi-adapter",
+      "url": "https://github.com/cyzlmh/dsh-pi-adapter",
+      "description": "Run pi coding-agent extensions (ExtensionAPI) inside DeepSeek Harness via a cordis plugin bridge",
+      "description_zh": "",
+      "category": "",
+      "stars": 0,
+      "topics": [
+        "cordis",
+        "deepseek-harness",
+        "dsh-plugin",
+        "pi-coding-agent"
+      ],
+      "updated_at": "2026-08-14T03:20:06Z",
+      "is_plugin": true,
+      "source": "catalog"
+    },
+    {
+      "name": "Danilky666/dsh-vision",
+      "url": "https://github.com/Danilky666/dsh-vision",
+      "description": "DeepSeek Harness vision plugin: visual working memory for text-only agents (numbered element inventory, region inspection, verbatim text extraction)",
+      "description_zh": "",
+      "category": "",
+      "stars": 0,
+      "topics": [],
+      "updated_at": "2026-08-14T07:13:48Z",
+      "is_plugin": true,
+      "source": "catalog"
+    },
+    {
+      "name": "Easyhoov/deepseek-harness-desktop",
+      "url": "https://github.com/Easyhoov/deepseek-harness-desktop",
+      "description": "Unofficial in-process desktop app for DeepSeek Harness: the host composition boots inside the Electron main process with zero ports and an IPC bridge. Not affiliated with DeepSeek.",
+      "description_zh": "",
+      "category": "",
+      "stars": 0,
+      "topics": [
+        "deepseek-harness",
+        "dsh-plugin"
+      ],
+      "updated_at": "2026-08-14T11:01:37Z",
+      "is_plugin": true,
+      "source": "catalog"
+    },
+    {
+      "name": "guanyibei1314/dsh-desktop",
+      "url": "https://github.com/guanyibei1314/dsh-desktop",
+      "description": "DSH Desktop - codex ?????? DeepSeek Harness ?????(Electron:??/????/??/SSE ??)",
+      "description_zh": "",
+      "category": "",
+      "stars": 0,
+      "topics": [],
+      "updated_at": "2026-08-14T01:50:24Z",
+      "is_plugin": true,
+      "source": "catalog"
+    },
+    {
+      "name": "hialuoy/deepseek-harness-desktop",
+      "url": "https://github.com/hialuoy/deepseek-harness-desktop",
+      "description": "DeepSeek Harness 的轻量级桌面壳,基于 Tauri v2:spawn dsh web --port 0,解析端口,用系统原生 WebView 加载 Web UI。",
+      "description_zh": "",
+      "category": "",
+      "stars": 0,
+      "topics": [
+        "deepseek-harness-desktop",
+        "dsh-plugin"
+      ],
+      "updated_at": "2026-08-14T10:59:50Z",
+      "is_plugin": true,
+      "source": "catalog"
+    },
+    {
+      "name": "howlma/dsh-desktop",
+      "url": "https://github.com/howlma/dsh-desktop",
+      "description": "",
+      "description_zh": "",
+      "category": "",
+      "stars": 0,
+      "topics": [
+        "dsh-plugin"
+      ],
+      "updated_at": "2026-08-14T04:49:06Z",
+      "is_plugin": true,
+      "source": "catalog"
+    },
+    {
+      "name": "ht-shaipe/dsh-desktop",
+      "url": "https://github.com/ht-shaipe/dsh-desktop",
+      "description": "DeepSeek Harness Desktop",
+      "description_zh": "",
+      "category": "",
+      "stars": 0,
+      "topics": [],
+      "updated_at": "2026-08-14T06:21:24Z",
+      "is_plugin": true,
+      "source": "catalog"
+    },
+    {
+      "name": "kiva-9/dsh-desktop",
+      "url": "https://github.com/kiva-9/dsh-desktop",
+      "description": "Lightweight desktop client for DeepSeek Harness (credits DeepSeek Harness and DeepSeek-Reasonix)",
+      "description_zh": "",
+      "category": "",
+      "stars": 0,
+      "topics": [
+        "coding-agent",
+        "deepseek-harness",
+        "desktop",
+        "macos",
+        "swift"
+      ],
+      "updated_at": "2026-08-14T10:57:43Z",
+      "is_plugin": true,
+      "source": "catalog"
+    },
+    {
+      "name": "lakeofsky347/dsh-vision",
+      "url": "https://github.com/lakeofsky347/dsh-vision",
+      "description": "Vision Bridge for DeepSeek Harness: 识图路由插件，图片交给视觉模型描述后回填给纯文本 DeepSeek",
+      "description_zh": "",
+      "category": "",
+      "stars": 0,
+      "topics": [
+        "dsh-plugin"
+      ],
+      "updated_at": "2026-08-14T01:52:45Z",
+      "is_plugin": true,
+      "source": "catalog"
+    },
+    {
+      "name": "libi/dsh-desktop",
+      "url": "https://github.com/libi/dsh-desktop",
+      "description": "Desktop client for DeepSeek Harness",
+      "description_zh": "",
+      "category": "",
+      "stars": 0,
+      "topics": [],
+      "updated_at": "2026-08-14T08:35:36Z",
+      "is_plugin": true,
+      "source": "catalog"
+    },
+    {
+      "name": "nbhby/dsh-vision",
+      "url": "https://github.com/nbhby/dsh-vision",
+      "description": "Vision bridge plugin for DeepSeek Harness - vision_analyze tool (qwen3.8-max) for text-only models; migrated from claude-vision-skill.",
+      "description_zh": "",
+      "category": "",
+      "stars": 0,
+      "topics": [],
+      "updated_at": "2026-08-14T09:36:30Z",
+      "is_plugin": true,
+      "source": "catalog"
+    },
+    {
+      "name": "neciszhang/dsh-desktop",
+      "url": "https://github.com/neciszhang/dsh-desktop",
+      "description": "Desktop client for DeepSeek Harness.",
+      "description_zh": "",
+      "category": "",
+      "stars": 0,
+      "topics": [
+        "deepseek-harness",
+        "desktop",
+        "dsh",
+        "dsh-plugins",
+        "harness"
+      ],
+      "updated_at": "2026-08-14T10:38:07Z",
+      "is_plugin": true,
+      "source": "catalog"
+    },
+    {
+      "name": "Nothing-is-important/dsh-desktop",
+      "url": "https://github.com/Nothing-is-important/dsh-desktop",
+      "description": "Native Electron desktop shell for DeepSeek Harness",
+      "description_zh": "",
+      "category": "",
+      "stars": 0,
+      "topics": [],
+      "updated_at": "2026-08-13T23:03:09Z",
+      "is_plugin": true,
+      "source": "catalog"
+    },
+    {
+      "name": "preflower/dsh-desktop",
+      "url": "https://github.com/preflower/dsh-desktop",
+      "description": "Ready-to-use DeepSeek Harness application",
+      "description_zh": "",
+      "category": "",
+      "stars": 0,
+      "topics": [],
+      "updated_at": "2026-08-14T09:41:03Z",
+      "is_plugin": true,
+      "source": "catalog"
+    },
+    {
+      "name": "qingchunnh/dsh-desktop",
+      "url": "https://github.com/qingchunnh/dsh-desktop",
+      "description": "DeepSeek Harness 的桌面客户端，自动检测本机运行环境，启动并连接 dsh Web UI",
+      "description_zh": "",
+      "category": "",
+      "stars": 0,
+      "topics": [
+        "dsh",
+        "dsh-plugin",
+        "dsh-plugins"
+      ],
+      "updated_at": "2026-08-14T00:59:04Z",
+      "is_plugin": true,
+      "source": "catalog"
+    },
+    {
+      "name": "qinlinglong/dsh-desktop",
+      "url": "https://github.com/qinlinglong/dsh-desktop",
+      "description": "deepseek harness 桌面版",
+      "description_zh": "",
+      "category": "",
+      "stars": 0,
+      "topics": [],
+      "updated_at": "2026-08-14T07:02:13Z",
+      "is_plugin": true,
+      "source": "catalog"
+    },
+    {
+      "name": "ReachGa0/dsh-desktop",
+      "url": "https://github.com/ReachGa0/dsh-desktop",
+      "description": "Electron desktop shell for DeepSeek Harness (dsh web) — run the harness in a standalone window without a terminal or browser",
+      "description_zh": "",
+      "category": "",
+      "stars": 0,
+      "topics": [
+        "deepseek",
+        "deepseek-harness",
+        "desktop-app",
+        "dsh-plugin",
+        "electron",
+        "electron-app",
+        "harness"
+      ],
+      "updated_at": "2026-08-14T07:31:28Z",
+      "is_plugin": true,
+      "source": "catalog"
+    },
+    {
+      "name": "s3yf1337/dsh-desktop",
+      "url": "https://github.com/s3yf1337/dsh-desktop",
+      "description": "dsh desktop profile: native Tauri window over the DeepSeek Harness web surface, installed as a real plugin bundle",
+      "description_zh": "",
+      "category": "",
+      "stars": 0,
+      "topics": [],
+      "updated_at": "2026-08-14T04:19:05Z",
+      "is_plugin": true,
+      "source": "catalog"
+    },
+    {
+      "name": "sjakdhasdh/dsh-vision",
+      "url": "https://github.com/sjakdhasdh/dsh-vision",
+      "description": "Vision tool plugin for DeepSeek Harness (DSH): give text-only models like deepseek-v4-flash image recognition via Alibaba Bailian / any OpenAI-compatible vision API. 给 DeepSeek Harness 无识图能力模型加识图工具。",
+      "description_zh": "",
+      "category": "",
+      "stars": 0,
+      "topics": [
+        "ai-agent",
+        "deepseek",
+        "deepseek-harness",
+        "dsh-plugin",
+        "llm",
+        "plugin",
+        "vision"
+      ],
+      "updated_at": "2026-08-14T07:57:42Z",
+      "is_plugin": true,
+      "source": "catalog"
+    },
+    {
+      "name": "sjscy05/dsh-desktop",
+      "url": "https://github.com/sjscy05/dsh-desktop",
+      "description": "",
+      "description_zh": "",
+      "category": "",
+      "stars": 0,
+      "topics": [
+        "dsh-plugin",
+        "dsh-plugins"
+      ],
+      "updated_at": "2026-08-14T05:52:49Z",
+      "is_plugin": true,
+      "source": "catalog"
+    },
+    {
+      "name": "TingRuDeng/dsh-feishu-bot",
+      "url": "https://github.com/TingRuDeng/dsh-feishu-bot",
+      "description": "Feishu (Lark) private-chat frontend for DeepSeek Harness: drive, monitor, and approve local agents from Feishu, sharing sessions with the Web GUI",
+      "description_zh": "",
+      "category": "",
+      "stars": 0,
+      "topics": [
+        "ai-agent",
+        "chatbot",
+        "deepseek-harness",
+        "dsh-plugin",
+        "feishu",
+        "lark"
+      ],
+      "updated_at": "2026-08-14T10:51:46Z",
+      "is_plugin": true,
+      "source": "catalog"
+    },
+    {
+      "name": "tuterx/dsh-desktop",
+      "url": "https://github.com/tuterx/dsh-desktop",
+      "description": "DeepSeek Harness desktop app - auto-built from upstream + BETA dsh-host-electron plugin",
+      "description_zh": "",
+      "category": "",
+      "stars": 0,
+      "topics": [],
+      "updated_at": "2026-08-14T09:47:21Z",
+      "is_plugin": true,
+      "source": "catalog"
+    },
+    {
+      "name": "xiangshangya/deepseek-harness-desktop",
+      "url": "https://github.com/xiangshangya/deepseek-harness-desktop",
+      "description": "Electron desktop app for DeepSeek Harness: bundles the dsh web server and its frontend into one installable app",
+      "description_zh": "",
+      "category": "",
+      "stars": 0,
+      "topics": [
+        "ai-agent",
+        "deepseek-harness",
+        "desktop-app",
+        "dsh",
+        "dsh-plugin",
+        "electron"
+      ],
+      "updated_at": "2026-08-13T18:44:47Z",
+      "is_plugin": true,
+      "source": "catalog"
+    },
+    {
+      "name": "xiaoyuxiaoyuqwq/dsh-desktop",
+      "url": "https://github.com/xiaoyuxiaoyuqwq/dsh-desktop",
+      "description": "DeepSeek Harness 简易桌面端，可供一键式启动",
+      "description_zh": "",
+      "category": "",
+      "stars": 0,
+      "topics": [
+        "dsh-plugin"
+      ],
+      "updated_at": "2026-08-14T10:47:09Z",
+      "is_plugin": true,
+      "source": "catalog"
+    },
+    {
+      "name": "yuanzhoucanxiang/dsh-desktop",
+      "url": "https://github.com/yuanzhoucanxiang/dsh-desktop",
+      "description": "DeepSeek Harness Desktop shell",
+      "description_zh": "",
+      "category": "",
+      "stars": 0,
+      "topics": [],
+      "updated_at": "2026-08-14T08:41:44Z",
+      "is_plugin": true,
+      "source": "catalog"
+    }
+  ]
+}
