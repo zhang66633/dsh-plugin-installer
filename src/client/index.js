@@ -97,9 +97,11 @@ function StoreView({ requestInstall }) {
             ),
             p.category ? h('span', { style: S.chip }, p.category) : null,
             p.stars > 0 ? h('span', { style: S.stars }, `★ ${p.stars}`) : null,
-            done
-              ? h('span', { style: { ...S.btn, ...S.btnDone } }, '已请求安装')
-              : confirmingNow
+            p.installed
+              ? h('span', { style: { ...S.btn, ...S.btnDone }, title: '已安装，重启 dsh web 后生效' }, '已安装')
+              : done
+                ? h('span', { style: { ...S.btn, ...S.btnDone } }, '已请求安装')
+                : confirmingNow
                 ? h('span', { style: S.confirmWrap },
                     h('span', { style: S.confirmText }, '将修改 web profile 并执行安装命令，确认安装？'),
                     h('span', { style: { display: 'flex', gap: '8px' } },
