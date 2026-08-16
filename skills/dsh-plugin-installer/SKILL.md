@@ -53,6 +53,8 @@ dsh plugin --profile <profile> add <pkg>          # = pnpm add 到 profile
 
 - **坑：stale dist-tag**。若 `npm view <pkg> version` 返回 `0.0.1-rc.1` 但生态是 `0.1.0-rc.6`，必须钉版本：`dsh plugin --profile <profile> add <pkg>@0.1.0-rc.6`。
 - **坑：聚合包要拆**。聚合包（如 `@linxin666/dsh-web-ui-all`）若含坏子包，改为逐个注册可用子包到 `dsh.profile.bundles`（跳过坏的）。
+- **坑：add 会丢 bundles 条目**。`dsh plugin add` 重写 profile `package.json` 时可能把其他插件从 `dsh.profile.bundles` 静默移除（dependencies 不动、只动 bundles；症状：dump-config 里原插件消失、stderr 报 `patch: entry "X" not found`）——装完必核对 bundles 清单（见 [edge-cases #17](<技能目录>/references/edge-cases.md)）。
+- **坑：pnpm 会复发 junction 损坏**。每次 `dsh plugin add`（= pnpm install）都可能把 link: 跨盘依赖（C: profile → D: 源码）的 junction 打坏——装完必对每个 link: 依赖做 junction 体检并重建（见 [edge-cases #16](<技能目录>/references/edge-cases.md)）。
 - 装完若插件要出现在 GUI，确认它在 profile `package.json` 的 `dsh.profile.bundles` 里。
 
 ### B. GitHub clone + 注册（对不在 npm 的插件）
@@ -101,6 +103,11 @@ curl -s http://127.0.0.1:3080/_api/plugins | grep '"id":"<插件名>"'   # clien
 # 4. 该插件的 client bundle 伺服 200
 ```
 
+**npm add 之后的必查两项**（`dsh plugin add` 的两个副作用，见 edge-cases #16/#17）：
+
+1. **bundles 完整性**：核对 profile `package.json` 的 `dsh.profile.bundles` 仍包含**所有**既有插件（add 会静默丢条目）；缺谁补谁。
+2. **link: junction 体检**：对每个 `link:` 依赖检查 `<profile>/node_modules/<pkg>/package.json` 可解析；坏 junction 先 `cmd /c rmdir` 再 `cmd /c mklink /J ... <绝对目标>` 重建。
+
 ## 边缘情况速查（完整版见 `<技能目录>/references/edge-cases.md`）
 
 | 症状 | 原因 | 处理 |
@@ -117,6 +124,8 @@ curl -s http://127.0.0.1:3080/_api/plugins | grep '"id":"<插件名>"'   # clien
 | 皮肤 apply 400 / bundle 500 | skin-center 上游路径 bug | `<技能目录>/scripts/patch-skins.sh`（walk-up 补丁，版本条件化，幂等重跑） |
 | memory-evolve 404 | 功能默认关闭（正常） | 不用管，用户开启功能即出现 |
 | 控制台 "Unexpected token '<'" | fetch 到 HTML 当 JSON | 路由没挂 → 用桥接/查该插件 README |
+| add 后原插件从 dump-config 消失 | `dsh plugin add` 重写 bundles 丢了其他条目（#17） | 把丢的 bundle 名加回 `dsh.profile.bundles` |
+| add 后 link: 插件解析失败 | pnpm 跨盘 junction 复发（#16） | 删坏 junction 后 `mklink /J` 重建为绝对目标，装完必查 |
 
 ## 报告模板
 
